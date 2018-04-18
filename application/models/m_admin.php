@@ -2,16 +2,17 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_admin extends CI_model {
+	private $table="admin";
+	private $primary="id_admin";
 
 public function __construct()
 {
 	parent::__construct();
 }
- public function getdata()
+public function getdataadmin($key)
  {
- 	$k=$this->db->query("select * from admin");
+ 	$k=$this->db->query("select*from admin where id_admin ='$key'");
  	return $k;
- 	
  }
 
  public function getinsert($data)

@@ -33,23 +33,19 @@ class Admin extends CI_Controller {
 
 	public function editproses($id)
 	{
-		$username=$this->input->post('username'); 
-		$password=$this->input->post('password'); 
-		$nama=$this->input->post('nama'); 
-		$alamat=$this->input->post('alamat'); 
-		$tempat_lahir=$this->input->post('tempat_lahir'); 
-		$tanggal_lahir=$this->input->post('tanggal_lahir');
-		$no_ktp=$this->input->post('no_ktp'); 
+		$nama_admin=$this->input->post('nama_admin'); 
+		$alamat_admin=$this->input->post('alamat_admin'); 
+		$notelp_admin=$this->input->post('notelp_admin'); 
+		$email_admin=$this->input->post('email_admin');
+		$foto=$this->input->post('foto');
 
 			$info=array(
-				'idadmin'=>$id,
-				'username'=>$username,
-				'password'=>$password,
-				'nama'=>$nama,
-				'alamat'=>$alamat,
-				'tempat_lahir'=>$tempat_lahir,
-				'tanggal_lahir'=>$tanggal_lahir,
-				'no_ktp'=>$no_ktp,
+				'id_admin'=>$id,
+				'nama_admin'=>$nama_admin,
+				'alamat_admin'=>$alamat_admin,
+				'notelp_admin'=>$notelp_admin,
+				'email_admin'=>$email_admin,
+				'foto'=>$foto,
 			);
 			$this->m_admin->getupdate($info, $id);
 			redirect('admin');
@@ -58,27 +54,23 @@ class Admin extends CI_Controller {
 
 	public function simpan()
 	{
-		$id=$this->input->post('idadmin');
-		$username=$this->input->post('username'); 
-		$password=$this->input->post('password'); 
-		$nama=$this->input->post('nama'); 
-		$alamat=$this->input->post('alamat'); 
-		$tempat_lahir=$this->input->post('tempat_lahir'); 
-		$tanggal_lahir=$this->input->post('tanggal_lahir'); 
-		$no_ktp=$this->input->post('no_ktp');
-		$cek=$this->m_admin->getdataadmin($id);
+		$id_admin=$this->input->post('id_admin');
+		$nama_admin=$this->input->post('nama_admin'); 
+		$alamat_admin=$this->input->post('alamat_admin'); 
+		$notelp_admin=$this->input->post('notelp_admin'); 
+		$email_admin=$this->input->post('email_admin');
+		$foto=$this->input->post('foto');
+		$cek=$this->m_admin->getdataadmin($id_admin);
 		if($cek->num_rows()>0){ 				
 			redirect('admin/tambah');
 		}else { 								
 			$info=array(
-				'idadmin'=>$id,
-				'username'=>$username,
-				'password'=>$password,
-				'nama'=>$nama,
-				'alamat'=>$alamat,
-				'tempat_lahir'=>$tempat_lahir,
-				'tanggal_lahir'=>$tanggal_lahir,
-				'no_ktp'=>$no_ktp,
+				'id_admin'=>$id_admin,
+				'nama_admin'=>$nama_admin,
+				'alamat_admin'=>$alamat_admin,
+				'notelp_admin'=>$notelp_admin,
+				'email_admin'=>$email_admin,
+				'foto'=>$foto,
 			);
 			$this->m_admin->getinsert($info);
 			redirect('admin');
@@ -91,7 +83,7 @@ public function Hapus($id)
 		$data['menu']		='menu.php';
 		$data['content']	='admin/v_hapusadmin.php';
 		$data['data']		=$this->m_admin->cekid($id)->row_array();
-		$this->load->view('home.php',$data);
+		$this->load->view('v_home.php',$data);
 
 	}
 	public function hapusproses($id)

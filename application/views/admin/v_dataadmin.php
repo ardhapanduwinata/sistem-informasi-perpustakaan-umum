@@ -20,6 +20,7 @@
                     <th>Alamat</th>
                     <th>Nomor Hp</th>
                     <th>@mail</th>
+                    <th>Foto</th>
                     <th>aksi</th>
                 </thead>
             <tbody>
@@ -34,6 +35,7 @@
                         <td><?php echo $row->alamat_admin;?></td>
                         <td><?php echo $row->notelp_admin;?></td>
                         <td><?php echo $row->email_admin;?></td>
+                        <td><?php echo $row->foto;?></td>
                         <td> 
                             <a class="btn btn-primary" href="<?php echo base_url('index.php/admin/edit/'.$row->id_admin);?>">edit</a>
                             <a  class="btn btn-primary" href="<?php echo base_url('index.php/admin/hapus/'.$row->id_admin);?>">delete</a>
