@@ -8,7 +8,7 @@
                 <!--End Page Header -->
             </div>
     <div class="panel-body">
-    <a href="<?php echo base_url('index.php/anggota/tambah');?>" class= "btn btn-primary btn-small">Tambah Data</a>
+    <a href="<?php echo base_url('house.php/anggota/tambah');?>" class= "btn btn-primary btn-small">Tambah Data</a>
     <p>
         <div class="table-responsive">
             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
@@ -37,8 +37,8 @@
                         <td><?php echo $row->email_anggota;?></td>
                         <td><?php echo $row->foto;?></td>
                         <td> 
-                            <a class="btn btn-primary" href="<?php echo base_url('index.php/anggota/edit/'.$row->id_anggota);?>">edit</a>
-                            <a  class="btn btn-primary" href="<?php echo base_url('index.php/anggota/hapus/'.$row->id_anggota);?>">delete</a>
+                            <a class="btn btn-primary" href="<?php echo base_url('house.php/anggota/edit/'.$row->id_anggota);?>">edit</a>
+                            <a  class="btn btn-primary" href="<?php echo base_url('house.php/anggota/hapus/'.$row->id_anggota);?>">delete</a>
                    </tr>
                 </td>
             </div>

@@ -2,7 +2,7 @@
     <div id="page-wrapper">
      <div class="panel-body">
         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
-             <form class="form-horizontal" method="POST" action="<?php echo base_url('index.php/penerbit/editproses/'.$data['id_penerbit']);?>" onsubmit="return cekform();">
+             <form class="form-horizontal" method="POST" action="<?php echo base_url('house.php/penerbit/editproses/'.$data['id_penerbit']);?>" onsubmit="return cekform();">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <form role="form">
@@ -16,7 +16,7 @@
                                         </div>
                                             <br>
                                             <button type="submit" class="btn btn-success btn-sm">Edit</button>
-                                            <a href="<?php echo base_url('index.php/penerbit');?>" class="btn btn-default btn-sm">Kembali</a>
+                                            <a href="<?php echo base_url('house.php/penerbit');?>" class="btn btn-default btn-sm">Kembali</a>
                                             </p>
                                         </div>                  
                                         

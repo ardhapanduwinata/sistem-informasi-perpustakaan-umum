@@ -2,7 +2,7 @@
     <div id="page-wrapper">
      <div class="panel-body">
         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
-             <form class="form-horizontal" method="POST" action="<?php echo base_url('index.php/admin/simpan');?>" onsubmit="return cekform();">
+             <form class="form-horizontal" method="POST" action="<?php echo base_url('house.php/admin/simpan');?>" onsubmit="return cekform();">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <form role="form">
@@ -27,11 +27,11 @@
                                             <input class="form-control" type="email" name="email_admin" id="email_admin" placeholder="@mail" class="span3" required>
                                         </div>
                                         <div>
-                                            <label>foto</label>
-                                            <input class="form-control" type="text" name="foto" id="foto" placeholder="foto" class="span3" required>
-                                            <br>
+<!--                                            <label>foto</label>-->
+<!--                                            <input class="form-control" type="text" name="foto" id="foto" placeholder="foto" class="span3" required>-->
+<!--                                            <br>-->
                                             <button type="submit" class="btn btn-success btn-sm">Simpan</button>
-                                            <a href="<?php echo base_url('index.php/admin');?>" class="btn btn-default btn-sm">Kembali</a>
+                                            <a href="<?php echo base_url('house.php/admin');?>" class="btn btn-default btn-sm">Kembali</a>
                                             </p>
-                                        </div>                  
+                                        </div>
                                         

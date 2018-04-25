@@ -69,22 +69,22 @@
                         <!--end search section-->
                     </li>
                     <li class="selected">
-                        <a href="<?php echo base_url('index.php/home');?>"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+                        <a href="<?php echo base_url('house.php/home');?>"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
                     </li>
                     <li>
                         <a href=""><i class="fa fa-bar-chart-o fa-fw"></i> Master Data<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="<?php echo base_url('index.php/admin');?>">Admin</a>
+                                <a href="<?php echo base_url('house.php/admin');?>">Admin</a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url('index.php/anggota');?>">Anggota</a>
+                                <a href="<?php echo base_url('house.php/anggota');?>">Anggota</a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url('index.php/penerbit');?>">penerbit</a>
+                                <a href="<?php echo base_url('house.php/penerbit');?>">penerbit</a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url('index.php/kategori');?>">kategori</a>
+                                <a href="<?php echo base_url('house.php/kategori');?>">kategori</a>
                             </li>
 
                         </ul>

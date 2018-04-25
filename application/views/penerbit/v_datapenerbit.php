@@ -8,7 +8,7 @@
                 <!--End Page Header -->
             </div>
     <div class="panel-body">
-    <a href="<?php echo base_url('index.php/penerbit/tambah');?>" class= "btn btn-primary btn-small">Tambah Data</a>
+    <a href="<?php echo base_url('house.php/penerbit/tambah');?>" class= "btn btn-primary btn-small">Tambah Data</a>
     <p>
         <div class="table-responsive">
             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
@@ -29,8 +29,8 @@
                         <td><?php echo $row->id_penerbit;?></td>
                         <td><?php echo $row->nama_penerbit;?></td>
                         <td> 
-                            <a class="btn btn-primary" href="<?php echo base_url('index.php/penerbit/edit/'.$row->id_penerbit);?>">edit</a>
-                            <a  class="btn btn-primary" href="<?php echo base_url('index.php/penerbit/hapus/'.$row->id_penerbit);?>">delete</a>
+                            <a class="btn btn-primary" href="<?php echo base_url('house.php/penerbit/edit/'.$row->id_penerbit);?>">edit</a>
+                            <a  class="btn btn-primary" href="<?php echo base_url('house.php/penerbit/hapus/'.$row->id_penerbit);?>">delete</a>
                    </tr>
                 </td>
             </div>
