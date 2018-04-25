@@ -37,8 +37,9 @@
                         <td><?php echo $row->email_admin;?></td>
                         <td><?php echo $row->foto;?></td>
                         <td> 
-                            <a class="btn btn-primary" href="<?php echo base_url('index.php/admin/edit/'.$row->id_admin);?>">edit</a>
-                            <a  class="btn btn-primary" href="<?php echo base_url('index.php/admin/hapus/'.$row->id_admin);?>">delete</a>
+                            <a class="btn btn-warning" href="<?php echo base_url('index.php/admin/edit/'.$row->id_admin);?>">edit</a>
+                            <a  class="btn btn-danger" href="<?php echo base_url('index.php/admin/hapus/'.$row->id_admin);?>">delete</a>
+                            <a  class="btn btn-info" href="<?php echo base_url('index.php/admin/detail/'.$row->id_admin);?>">detail</a>
                    </tr>
                 </td>
             </div>

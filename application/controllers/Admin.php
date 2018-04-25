@@ -37,7 +37,21 @@ class Admin extends CI_Controller {
 		$alamat_admin=$this->input->post('alamat_admin'); 
 		$notelp_admin=$this->input->post('notelp_admin'); 
 		$email_admin=$this->input->post('email_admin');
-		$foto=$this->input->post('foto');
+		$foto=$_FILES['foto']['name'];
+			if($foto=''){}else
+			{
+				$config['upload_path']='./assets/path/';
+				$config['allowed_types']='gif|jpg|png';
+				$this->load->library('upload',$config);
+				if(! $this->upload->do_upload('foto'))
+				{
+					$error=array('error'=>$this->upload->display_errors());
+				}
+				else
+				{
+					$foto=$this->upload->data('file_name');
+				}
+			}
 
 			$info=array(
 				'id_admin'=>$id,
@@ -59,22 +73,37 @@ class Admin extends CI_Controller {
 		$alamat_admin=$this->input->post('alamat_admin'); 
 		$notelp_admin=$this->input->post('notelp_admin'); 
 		$email_admin=$this->input->post('email_admin');
-		$foto=$this->input->post('foto');
-		$cek=$this->m_admin->getdataadmin($id_admin);
-		if($cek->num_rows()>0){ 				
-			redirect('admin/tambah');
-		}else { 								
+		$foto=$_FILES['foto']['name'];
+			if($foto=''){}else
+			{
+				$config['upload_path']='./assets/path/';
+				$config['allowed_types']='gif|jpg|png';
+				$this->load->library('upload',$config);
+				if(! $this->upload->do_upload('foto'))
+				{
+					$error=array('error'=>$this->upload->display_errors());
+				}
+				else
+				{
+					$foto=$this->upload->data('file_name');
+				}
+			}
+		// $cek=$this->m_admin->getdataadmin($id_admin);
+		// if($cek->num_rows()>0){ 				
+		// 	redirect('admin/tambah');
+		// }else { 								
 			$info=array(
 				'id_admin'=>$id_admin,
 				'nama_admin'=>$nama_admin,
 				'alamat_admin'=>$alamat_admin,
 				'notelp_admin'=>$notelp_admin,
 				'email_admin'=>$email_admin,
-				'foto'=>$foto,
+				'foto'=>$foto
 			);
-			$this->m_admin->getinsert($info);
+			$this->db->insert('admin',$info);
+			// $this->m_admin->getinsert($info);
 			redirect('admin');
-		}
+		// }
 	}
 
 

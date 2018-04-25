@@ -3,6 +3,7 @@
      <div class="panel-body">
         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
              <form class="form-horizontal" method="POST" action="<?php echo base_url('index.php/admin/editproses/'.$data['id_admin']);?>" onsubmit="return cekform();">
+                 <?php echo form_open_multipart('Admin/simpan');?>
                             <div class="row">
                                 <div class="col-lg-6">
                                     <form role="form">
@@ -28,10 +29,10 @@
                                         </div>
                                         <div>
                                             <label>foto</label>
-                                            <input class="form-control" type="text" name="foto" id="foto" value="<?php echo $data['foto'];?>" placeholder="foto" class="span3" required>
+                                            <input class="form-control" type="file" name="foto" id="foto"  class="span3" required>
                                             <br>
                                             <button type="submit" class="btn btn-success btn-sm">Edit</button>
                                             <a href="<?php echo base_url('index.php/admin');?>" class="btn btn-default btn-sm">Kembali</a>
                                             </p>
                                         </div>                  
-                                        
+                                       <!--  value="<?php echo $data['foto'];?>" -->

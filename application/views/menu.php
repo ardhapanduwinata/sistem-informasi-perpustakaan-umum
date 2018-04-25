@@ -26,7 +26,7 @@
                     <!-- dropdown user-->
                     <ul class="dropdown-menu dropdown-user">
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                        <li><a href="<?php echo base_url('index.php/logout.php');?>"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
                         </li>
                     </ul>
                     <!-- end dropdown-user -->
@@ -48,7 +48,7 @@
                                 <img src="<?php echo base_url('assets/img/user.jpg');?>" alt="">
                             </div>
                             <div class="user-info">
-                                <div>Jonny <strong>Deen</strong></div>
+                                <div>Tri <strong>Nanda</strong></div>
                                 <div class="user-text-online">
                                     <span class="user-circle-online btn btn-success btn-circle "></span>&nbsp;Online
                                 </div>
@@ -94,7 +94,7 @@
                         <a href="#"><i class="fa fa-wrench fa-fw"></i>Config<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="panels-wells.html">Buku</a>
+                                <a href="<?php echo base_url('index.php/buku');?>">Buku</a>
                             </li>
                         </ul>
                         <!-- second-level-items -->
