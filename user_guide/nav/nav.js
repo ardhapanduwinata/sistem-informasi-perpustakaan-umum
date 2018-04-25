@@ -22,7 +22,7 @@ function create_menu(basepath)
 		'<h3>Installation</h3>' +
 		'<ul>' +
 			'<li><a href="'+base+'installation/downloads.html">Downloading CodeIgniter</a></li>' +
-			'<li><a href="'+base+'installation/index.html">Installation Instructions</a></li>' +
+			'<li><a href="'+base+'installation/house.php">Installation Instructions</a></li>' +
 			'<li><a href="'+base+'installation/upgrading.html">Upgrading from a Previous Version</a></li>' +
 			'<li><a href="'+base+'installation/troubleshooting.html">Troubleshooting</a></li>' +
 		'</ul>' +
@@ -40,7 +40,7 @@ function create_menu(basepath)
 		
 		'<h3>Tutorial</h3>' +
 		'<ul>' +
-			'<li><a href="'+base+'tutorial/index.html">Introduction</a></li>' +
+			'<li><a href="'+base+'tutorial/house.php">Introduction</a></li>' +
 			'<li><a href="'+base+'tutorial/static_pages.html">Static pages</a></li>' +
 			'<li><a href="'+base+'tutorial/news_section.html">News section</a></li>' +
 			'<li><a href="'+base+'tutorial/create_news_items.html">Create news items</a></li>' +
@@ -75,7 +75,7 @@ function create_menu(basepath)
 			'<li><a href="'+base+'general/alternative_php.html">Alternative PHP Syntax</a></li>' +
 			'<li><a href="'+base+'general/security.html">Security</a></li>' +
 			'<li><a href="'+base+'general/styleguide.html">PHP Style Guide</a></li>' +
-			'<li><a href="'+base+'doc_style/index.html">Writing Documentation</a></li>' +
+			'<li><a href="'+base+'doc_style/house.php">Writing Documentation</a></li>' +
 		'</ul>' +
 
 		'<h3>Additional Resources</h3>' +
@@ -123,7 +123,7 @@ function create_menu(basepath)
 		'<h3>Driver Reference</h3>' +
 		'<ul>' +
 		'<li><a href="'+base+'libraries/caching.html">Caching Class</a></li>' +
-		'<li><a href="'+base+'database/index.html">Database Class</a></li>' +
+		'<li><a href="'+base+'database/house.php">Database Class</a></li>' +
 		'<li><a href="'+base+'libraries/javascript.html">Javascript Class</a></li>' +
 		'</ul>' +
 
