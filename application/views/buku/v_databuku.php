@@ -30,18 +30,18 @@
                     <?php
 						$no = 1;
 						foreach ($data->result() as $row) {
-							$nama_penerbit	= $this->m_buku->getBukuById($row->id_penerbit)->row_array();
-							$nama_kategori	= $this->m_buku->getBukuById($row->id_kategori)->row_array();
-							$lokasi			= $this->m_buku->getBukuById($row->id_kategori)->row_array();
+							$nama_penerbit	= $this->m_buku->getBukuById($row->nama_penerbit)->row_array();
+							$nama_kategori	= $this->m_buku->getBukuById($row->nama_kategori)->row_array();
+							$lokasi			= $this->m_buku->getBukuById($row->lokasi)->row_array();
 						?>
                         <td><?php echo $no++; ?></td>
                         <td><?php echo $row->id_buku;?></td>
                         <td><?php echo $row->nama_buku;?></td>
                         <td><?php echo $row->pengarang;?></td>
                         <td><?php echo $row->tahun_terbit;?></td>
-                        <td><?php echo $nama_penerbit['id_penerbit'];?></td>
-                        <td><?php echo $nama_kategori['id_kategori'];?></td>
-                        <td><?php echo $lokasi['id_kategori'];?></td>
+                        <td><?php echo $nama_penerbit['nama_penerbit'];?></td>
+                        <td><?php echo $nama_kategori['nama_kategori'];?></td>
+                        <td><?php echo $lokasi['lokasi'];?></td>
                         <td>
                             <a class="btn btn-warning" href="<?php echo base_url('index.php/buku/edit/'.$row->id_buku);?>">edit</a>
                             <a class="btn btn-danger" href="<?php echo base_url('index.php/buku/hapus/'.$row->id_buku);?>">delete</a>

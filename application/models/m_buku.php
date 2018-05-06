@@ -6,7 +6,19 @@ class M_buku extends CI_model {
 	private $primary="id_buku";
 
 	public function getdatabuku(){
-		return $this->db->get("buku");
+		$k = "SELECT
+		buku.id_buku,
+		buku.nama_buku,
+		buku.pengarang,
+		buku.tahun_terbit,
+		penerbit.nama_penerbit,
+		kategori.nama_kategori,
+		kategori.lokasi
+		FROM
+		buku 
+		join penerbit on penerbit.id_penerbit = buku.id_penerbit
+		join kategori on kategori.id_kategori = buku.id_kategori";
+		return $this->db->query($k);
 	}
 
 	public function getBukuById($id_buku=""){
@@ -25,8 +37,8 @@ class M_buku extends CI_model {
 
 	public function cekid($id){
 		$id=$this->db->query("select * from buku 
-							  join kategori on buku.id_kategori = kategori.id_kategori
-							  join penerbit on buku.id_penerbit = penerbit.id_penerbit");
+							  join kategori on buku.id_kategori = kategori.nama_kategori
+							  join penerbit on buku.id_penerbit = penerbit.nama_penerbit");
 		return $id;
 	}
 	function getupdate($info, $id){
