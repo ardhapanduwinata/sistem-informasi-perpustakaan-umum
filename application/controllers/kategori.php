@@ -5,7 +5,7 @@ class kategori extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->model('m_kategori');
-		
+
 	}
 
 	public function index()
@@ -19,8 +19,9 @@ class kategori extends CI_Controller {
 	{	
 		$data['message'] = "";
 		$this->load->library("form_validation");
-		$this->form_validation->set_rules('id_penerbit','ID','required');
-		$this->form_validation->set_rules('nama_penerbit','Nama','required');
+		$this->form_validation->set_rules('id_kategori','ID','required');
+		$this->form_validation->set_rules('nama_kategori','Nama','required');
+		$this->form_validation->set_rules('lokasi','Lokasi','required');
 
 
 		$this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
@@ -73,7 +74,7 @@ class kategori extends CI_Controller {
 		);
 		$this->m_kategori->getupdate($info, $id);
 		redirect('kategori');
-		
+
 	}
 
 	public function simpan()
@@ -94,6 +95,6 @@ class kategori extends CI_Controller {
 	{
 		$this->m_kategori->hapus($id);
 		redirect('kategori');
-		
+
 	}
 }
