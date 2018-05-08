@@ -29,6 +29,7 @@
                     $no = 1;
                     foreach ($data->result() as $row) {
                     ?>
+<<<<<<< HEAD
                     <td><?php echo $no++; ?></td>
                     <td><?php echo $row->id_admin;?></td>
                     <td><?php echo $row->nama_admin;?></td>
@@ -41,6 +42,20 @@
                         <a  class="btn btn-danger" href="<?php echo base_url('index.php/admin/hapus/'.$row->id_admin);?>">delete</a>
                         <a  class="btn btn-info" href="<?php echo base_url('index.php/admin/detail/'.$row->id_admin);?>">detail</a>
                 </tr>
+=======
+                        <td><?php echo $no++; ?></td>
+                        <td><?php echo $row->id_admin;?></td>
+                        <td><?php echo $row->nama_admin;?></td>
+                        <td><?php echo $row->alamat_admin;?></td>
+                        <td><?php echo $row->notelp_admin;?></td>
+                        <td><?php echo $row->email_admin;?></td>
+                        <td><img src="<?php echo base_url() ?>assets/upload/admin/<?php echo $row->foto;?>" alt="" width="100px" height="80px"></td>
+                        <td> 
+                            <a class="btn btn-warning" href="<?php echo base_url('index.php/admin/edit/'.$row->id_admin);?>">edit</a>
+                            <a  class="btn btn-danger" href="<?php echo base_url('index.php/admin/hapus/'.$row->id_admin);?>" >delete</a>
+                            <a  class="btn btn-info" href="<?php echo base_url('index.php/admin/detail/'.$row->id_admin);?>">detail</a>
+                   </tr>
+>>>>>>> 67549ee5a5aaa7642f84f07ab7a8979dc2799a68
                 </td>
         </div>
         <?php }?>

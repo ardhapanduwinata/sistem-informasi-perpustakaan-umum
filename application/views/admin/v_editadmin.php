@@ -3,7 +3,6 @@
      <div class="panel-body">
         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
              <form class="form-horizontal" method="POST" action="<?php echo base_url('index.php/admin/editproses/'.$data['id_admin']);?>" onsubmit="return cekform();">
-                 <?php echo form_open_multipart('Admin/simpan');?>
                             <div class="row">
                                 <div class="col-lg-6">
                                     <form role="form">
