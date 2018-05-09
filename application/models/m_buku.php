@@ -5,6 +5,12 @@ class M_buku extends CI_model {
 	private $table="buku";
 	private $primary="id_buku";
 
+	public function getOne($id)
+	{
+		$this->db->where('id_buku',$id);
+		return $this->db->get('buku')->result_array();
+	}
+
 	public function getdatabuku(){
 		$k = "SELECT
 		buku.id_buku,
