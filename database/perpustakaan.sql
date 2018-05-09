@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 19 Apr 2018 pada 18.27
+-- Waktu pembuatan: 09 Bulan Mei 2018 pada 02.42
 -- Versi server: 10.1.31-MariaDB
 -- Versi PHP: 7.2.3
 
@@ -42,8 +42,8 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id_admin`, `nama_admin`, `alamat_admin`, `notelp_admin`, `email_admin`, `foto`) VALUES
-(1, 'nara', 'malang', '1', 'trinsp11@gmail.com', 'lion.png'),
-(2, 'Arwi', 'malang', '2', 'arwi@gmail.com', 'arwi.png');
+(1, 'nara', 'malang', '1', 'trinsp11@gmail.com', '3.png'),
+(2, 'trinanda', 'malang', '3', 'trinsp11@gmail.com', 'sby_hijacking.PNG');
 
 -- --------------------------------------------------------
 
@@ -80,8 +80,17 @@ CREATE TABLE `buku` (
   `pengarang` varchar(45) DEFAULT NULL,
   `tahun_terbit` varchar(45) DEFAULT NULL,
   `id_penerbit` int(11) NOT NULL,
-  `id_kategori` int(11) NOT NULL
+  `id_kategori` int(11) NOT NULL,
+  `cover_buku` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data untuk tabel `buku`
+--
+
+INSERT INTO `buku` (`id_buku`, `nama_buku`, `pengarang`, `tahun_terbit`, `id_penerbit`, `id_kategori`, `cover_buku`) VALUES
+(1, 'TIK', 'Tri Nanda Satrio Purnomo', '2012', 1, 1, 'debian_trinsp.PNG'),
+(2, 'ekonomi', 'bb', '2012', 1, 1, 'default-zones.PNG');
 
 -- --------------------------------------------------------
 
@@ -92,7 +101,7 @@ CREATE TABLE `buku` (
 CREATE TABLE `kategori` (
   `id_kategori` int(11) NOT NULL,
   `nama_kategori` varchar(45) DEFAULT NULL,
-  `lokasi` varchar(45) DEFAULT NULL
+  `lokasi` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -101,7 +110,19 @@ CREATE TABLE `kategori` (
 
 INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `lokasi`) VALUES
 (1, 'komputer', 'A1'),
-(2, 'Akuntasi', 'B2');
+(2, 'Akuntasi', 'B1');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `lokasi`
+--
+
+CREATE TABLE `lokasi` (
+  `id_lokasi` int(11) NOT NULL,
+  `lokasi` varchar(200) NOT NULL,
+  `id_kategori` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -180,6 +201,12 @@ ALTER TABLE `kategori`
   ADD PRIMARY KEY (`id_kategori`);
 
 --
+-- Indeks untuk tabel `lokasi`
+--
+ALTER TABLE `lokasi`
+  ADD PRIMARY KEY (`id_lokasi`);
+
+--
 -- Indeks untuk tabel `peminjaman`
 --
 ALTER TABLE `peminjaman`
@@ -201,6 +228,16 @@ ALTER TABLE `pengembalian`
   ADD PRIMARY KEY (`id_pengembalian`,`id_peminjaman`,`id_admin`),
   ADD KEY `fk_pengembalian_peminjaman1_idx` (`id_peminjaman`),
   ADD KEY `fk_pengembalian_admin1_idx` (`id_admin`);
+
+--
+-- AUTO_INCREMENT untuk tabel yang dibuang
+--
+
+--
+-- AUTO_INCREMENT untuk tabel `lokasi`
+--
+ALTER TABLE `lokasi`
+  MODIFY `id_lokasi` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

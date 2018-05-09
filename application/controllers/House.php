@@ -3,15 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class House extends CI_Controller {
 
-    public function __construct()
-    {
-        parent::__construct();
-        $this->load->model('m_house');
-    }
-
 	public function index()
 	{
-		$data['array_buku']=$this->m_house->getBuku();
+		$data['content'] = 'content.php';
+		$data['menu'] 	= 'menu.php';
 		$this->load->view('house', $data);
 	}
 

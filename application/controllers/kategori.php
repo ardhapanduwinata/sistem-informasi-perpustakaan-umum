@@ -3,10 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class kategori extends CI_Controller {
 	function __construct(){
-		parent::__construct();
+        parent::__construct();
 		$this->load->model('m_kategori');
-
-	}
+        
+    }
 
 	public function index()
 	{	
@@ -17,39 +17,9 @@ class kategori extends CI_Controller {
 	}
 	public function tambah()
 	{	
-		$data['message'] = "";
-		$this->load->library("form_validation");
-		$this->form_validation->set_rules('id_kategori','ID','required');
-		$this->form_validation->set_rules('nama_kategori','Nama','required');
-		$this->form_validation->set_rules('lokasi','Lokasi','required');
-
-
-		$this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
-
-
-		if($this->form_validation->run()==FALSE){
-			$data['menu']		='menu.php';
-			$data['content']	='kategori/v_tambahkategori.php';
-			$this->load->view('v_home.php',$data);
-		}
-		else{
-			$id_kategori=$this->input->post('id_kategori');
-			$nama_kategori=$this->input->post('nama_kategori');
-			$lokasi=$this->input->post('lokasi'); 
-			$cek=$this->m_kategori->getdatakategori($id_kategori);
-			if($cek->num_rows()>0){ 				
-				redirect('kategori/tambah');
-			}else { 								
-				$info=array(
-					'id_kategori'=>$id_kategori,
-					'nama_kategori'=>$nama_kategori,
-					'lokasi'=>$lokasi,
-				);
-				$this->m_kategori->getinsert($info);
-				redirect('kategori');
-			}
-		}
-		
+		$data['menu']		='menu.php';
+		$data['content']	='kategori/v_tambahkategori.php';
+		$this->load->view('v_home.php',$data);
 	}
 
 	public function edit($id)
@@ -67,23 +37,37 @@ class kategori extends CI_Controller {
 		$lokasi=$this->input->post('lokasi');  
 
 
-		$info=array(
-			'id_kategori'=>$id,
-			'nama_kategori'=>$nama_kategori,
-			'lokasi'=>$lokasi,
-		);
-		$this->m_kategori->getupdate($info, $id);
-		redirect('kategori');
-
+			$info=array(
+				'id_kategori'=>$id,
+				'nama_kategori'=>$nama_kategori,
+				'lokasi'=>$lokasi,
+			);
+			$this->m_kategori->getupdate($info, $id);
+			redirect('kategori');
+	
 	}
 
 	public function simpan()
 	{
-		
+		$id_kategori=$this->input->post('id_kategori');
+		$nama_kategori=$this->input->post('nama_kategori');
+		$lokasi=$this->input->post('lokasi'); 
+		$cek=$this->m_kategori->getdatakategori($id_kategori);
+		if($cek->num_rows()>0){ 				
+			redirect('kategori/tambah');
+		}else { 								
+			$info=array(
+				'id_kategori'=>$id_kategori,
+				'nama_kategori'=>$nama_kategori,
+				'lokasi'=>$lokasi,
+			);
+			$this->m_kategori->getinsert($info);
+			redirect('kategori');
+		}
 	}
 
 
-	public function Hapus($id)
+public function Hapus($id)
 	{	
 		$data['menu']		='menu.php';
 		$data['content']	='kategori/v_hapuskategori.php';
@@ -93,8 +77,8 @@ class kategori extends CI_Controller {
 	}
 	public function hapusproses($id)
 	{
-		$this->m_kategori->hapus($id);
-		redirect('kategori');
-
+			$this->m_kategori->hapus($id);
+			redirect('kategori');
+	
 	}
-}
+ }
