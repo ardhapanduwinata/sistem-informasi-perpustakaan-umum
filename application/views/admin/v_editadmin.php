@@ -2,11 +2,7 @@
     <div id="page-wrapper">
      <div class="panel-body">
         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
-<<<<<<< HEAD
               <?php echo form_open_multipart('admin/editproses/'.$data['id_admin']);?>
-=======
-             <form class="form-horizontal" method="POST" action="<?php echo base_url('index.php/admin/editproses/'.$data['id_admin']);?>" onsubmit="return cekform();">
->>>>>>> c70f93819fdad8c0c188f376e52219bb606d0484
                             <div class="row">
                                 <div class="col-lg-6">
                                     <form role="form">

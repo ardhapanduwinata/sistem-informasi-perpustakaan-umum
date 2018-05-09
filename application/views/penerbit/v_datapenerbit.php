@@ -30,11 +30,7 @@
                         <td><?php echo $row->nama_penerbit;?></td>
                         <td> 
                     <a  class="btn btn-warning" href="<?php echo base_url('index.php/penerbit/edit/'.$row->id_penerbit);?>">edit</a>
-<<<<<<< HEAD
                     <a  class="btn btn-danger" onclick="return confirm('Anda Yakin?, Data akan dihapus Permanen!'); href="<?php echo base_url('index.php/penerbit/hapusproses/'.$row->id_penerbit);?>">delete</a>
-=======
-                    <a  class="btn btn-danger" href="<?php echo base_url('index.php/penerbit/hapus/'.$row->id_penerbit);?>">delete</a>
->>>>>>> c70f93819fdad8c0c188f376e52219bb606d0484
                     <a  class="btn btn-info" href="<?php echo base_url('index.php/penerbit/detail/'.$row->id_penerbit);?>">detail</a>
                    </tr>
                 </td>
