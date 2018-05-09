@@ -64,7 +64,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 order-lg-2">
                     <div class="p-5">
-                        <img style="width: 250px;" src="<?= base_url('assets/img/') . $key['image'] ?>" alt="">
+                        <img style="width: 250px;" src="<?= base_url('assets/path/') . $key['cover_buku'] ?>" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
@@ -83,7 +83,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="p-5">
-                        <img style="width: 250px;" src="<?= base_url('assets/img/') . $key['image'] ?>" alt="">
+                        <img style="width: 250px;" src="<?= base_url('assets/path/') . $key['cover_buku'] ?>" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6">

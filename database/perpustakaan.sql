@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 09 Bulan Mei 2018 pada 02.42
--- Versi server: 10.1.31-MariaDB
--- Versi PHP: 7.2.3
+-- Generation Time: May 09, 2018 at 05:13 AM
+-- Server version: 10.1.26-MariaDB
+-- PHP Version: 7.1.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -33,22 +33,13 @@ CREATE TABLE `admin` (
   `nama_admin` varchar(45) DEFAULT NULL,
   `alamat_admin` varchar(45) DEFAULT NULL,
   `notelp_admin` varchar(45) DEFAULT NULL,
-  `email_admin` varchar(45) DEFAULT NULL,
-  `foto` varchar(250) DEFAULT NULL
+  `email_admin` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data untuk tabel `admin`
---
-
-INSERT INTO `admin` (`id_admin`, `nama_admin`, `alamat_admin`, `notelp_admin`, `email_admin`, `foto`) VALUES
-(1, 'nara', 'malang', '1', 'trinsp11@gmail.com', '3.png'),
-(2, 'trinanda', 'malang', '3', 'trinsp11@gmail.com', 'sby_hijacking.PNG');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `anggota`
+-- Table structure for table `anggota`
 --
 
 CREATE TABLE `anggota` (
@@ -56,22 +47,13 @@ CREATE TABLE `anggota` (
   `nama_anggota` varchar(45) DEFAULT NULL,
   `alamat_anggota` varchar(45) DEFAULT NULL,
   `notelp_anggota` varchar(45) DEFAULT NULL,
-  `email_anggota` varchar(45) DEFAULT NULL,
-  `foto` varchar(250) NOT NULL
+  `email_anggota` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data untuk tabel `anggota`
---
-
-INSERT INTO `anggota` (`id_anggota`, `nama_anggota`, `alamat_anggota`, `notelp_anggota`, `email_anggota`, `foto`) VALUES
-(1, 'trinsp', 'malang', '082244443789', 'trinsp11@gmail.com', 'trinsp.png'),
-(2, 'nara', 'malang', '081945999278', 'nara@gmail.com', 'nara.png');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `buku`
+-- Table structure for table `buku`
 --
 
 CREATE TABLE `buku` (
@@ -79,55 +61,53 @@ CREATE TABLE `buku` (
   `nama_buku` varchar(45) DEFAULT NULL,
   `pengarang` varchar(45) DEFAULT NULL,
   `tahun_terbit` varchar(45) DEFAULT NULL,
+  `image` varchar(255) NOT NULL,
   `id_penerbit` int(11) NOT NULL,
   `id_kategori` int(11) NOT NULL,
-  `cover_buku` varchar(200) NOT NULL
+  `sinopsis` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data untuk tabel `buku`
+-- Dumping data for table `buku`
 --
 
-INSERT INTO `buku` (`id_buku`, `nama_buku`, `pengarang`, `tahun_terbit`, `id_penerbit`, `id_kategori`, `cover_buku`) VALUES
-(1, 'TIK', 'Tri Nanda Satrio Purnomo', '2012', 1, 1, 'debian_trinsp.PNG'),
-(2, 'ekonomi', 'bb', '2012', 1, 1, 'default-zones.PNG');
+INSERT INTO `buku` (`id_buku`, `nama_buku`, `pengarang`, `tahun_terbit`, `image`, `id_penerbit`, `id_kategori`, `sinopsis`) VALUES
+(1, 'Man with Elephant', 'Ella Mckanzie', '2015', 'man-with-elephant.jpg', 1, 6, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
+(2, 'Out of Box', 'Suzanne Dudley', '2017', 'out-of-box.jpg', 1, 4, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. '),
+(3, 'Dutch(How to be Perfect)', 'Kathian Brands', '2016', 'dutch.jpg', 4, 8, 'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kategori`
+-- Table structure for table `kategori`
 --
 
 CREATE TABLE `kategori` (
   `id_kategori` int(11) NOT NULL,
   `nama_kategori` varchar(45) DEFAULT NULL,
-  `lokasi` varchar(200) NOT NULL
+  `lokasi` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data untuk tabel `kategori`
+-- Dumping data for table `kategori`
 --
 
 INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `lokasi`) VALUES
-(1, 'komputer', 'A1'),
-(2, 'Akuntasi', 'B1');
+(1, 'Cerita Anak', 'AC0001'),
+(2, 'Novel Fiksi', 'AB0001'),
+(3, 'Karya Ilmiah', 'AA0002'),
+(4, 'Novel Romance', 'AA0012'),
+(5, 'Novel Sci-fi', 'AA0013'),
+(6, 'Novel Fantasi', 'AA0014'),
+(7, 'Novel Horror', 'AA0015'),
+(8, 'Novel Dewasa', 'AA0016'),
+(9, 'Pelajaran Fisika', 'AB0002'),
+(10, 'Pelajaran Biologi', 'AB0003');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `lokasi`
---
-
-CREATE TABLE `lokasi` (
-  `id_lokasi` int(11) NOT NULL,
-  `lokasi` varchar(200) NOT NULL,
-  `id_kategori` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `peminjaman`
+-- Table structure for table `peminjaman`
 --
 
 CREATE TABLE `peminjaman` (
@@ -142,7 +122,7 @@ CREATE TABLE `peminjaman` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `penerbit`
+-- Table structure for table `penerbit`
 --
 
 CREATE TABLE `penerbit` (
@@ -151,16 +131,20 @@ CREATE TABLE `penerbit` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data untuk tabel `penerbit`
+-- Dumping data for table `penerbit`
 --
 
 INSERT INTO `penerbit` (`id_penerbit`, `nama_penerbit`) VALUES
-(1, 'air langga');
+(1, 'Gramedia'),
+(2, 'Erlangga'),
+(3, 'Ganesha'),
+(4, 'Wattpad'),
+(5, 'Airlangga');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pengembalian`
+-- Table structure for table `pengembalian`
 --
 
 CREATE TABLE `pengembalian` (
@@ -175,19 +159,19 @@ CREATE TABLE `pengembalian` (
 --
 
 --
--- Indeks untuk tabel `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id_admin`);
 
 --
--- Indeks untuk tabel `anggota`
+-- Indexes for table `anggota`
 --
 ALTER TABLE `anggota`
   ADD PRIMARY KEY (`id_anggota`);
 
 --
--- Indeks untuk tabel `buku`
+-- Indexes for table `buku`
 --
 ALTER TABLE `buku`
   ADD PRIMARY KEY (`id_buku`,`id_penerbit`,`id_kategori`),
@@ -195,19 +179,13 @@ ALTER TABLE `buku`
   ADD KEY `fk_buku_kategori1_idx` (`id_kategori`);
 
 --
--- Indeks untuk tabel `kategori`
+-- Indexes for table `kategori`
 --
 ALTER TABLE `kategori`
   ADD PRIMARY KEY (`id_kategori`);
 
 --
--- Indeks untuk tabel `lokasi`
---
-ALTER TABLE `lokasi`
-  ADD PRIMARY KEY (`id_lokasi`);
-
---
--- Indeks untuk tabel `peminjaman`
+-- Indexes for table `peminjaman`
 --
 ALTER TABLE `peminjaman`
   ADD PRIMARY KEY (`id_peminjaman`,`id_anggota`,`buku_id_buku`,`id_admin`),
@@ -216,13 +194,13 @@ ALTER TABLE `peminjaman`
   ADD KEY `fk_peminjaman_admin1_idx` (`id_admin`);
 
 --
--- Indeks untuk tabel `penerbit`
+-- Indexes for table `penerbit`
 --
 ALTER TABLE `penerbit`
   ADD PRIMARY KEY (`id_penerbit`);
 
 --
--- Indeks untuk tabel `pengembalian`
+-- Indexes for table `pengembalian`
 --
 ALTER TABLE `pengembalian`
   ADD PRIMARY KEY (`id_pengembalian`,`id_peminjaman`,`id_admin`),
@@ -230,28 +208,57 @@ ALTER TABLE `pengembalian`
   ADD KEY `fk_pengembalian_admin1_idx` (`id_admin`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `lokasi`
+-- AUTO_INCREMENT for table `admin`
 --
-ALTER TABLE `lokasi`
-  MODIFY `id_lokasi` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `admin`
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `anggota`
+--
+ALTER TABLE `anggota`
+  MODIFY `id_anggota` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `buku`
+--
+ALTER TABLE `buku`
+  MODIFY `id_buku` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `kategori`
+--
+ALTER TABLE `kategori`
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+--
+-- AUTO_INCREMENT for table `peminjaman`
+--
+ALTER TABLE `peminjaman`
+  MODIFY `id_peminjaman` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `penerbit`
+--
+ALTER TABLE `penerbit`
+  MODIFY `id_penerbit` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `pengembalian`
+--
+ALTER TABLE `pengembalian`
+  MODIFY `id_pengembalian` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- Constraints for dumped tables
+--
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
---
-
---
--- Ketidakleluasaan untuk tabel `buku`
+-- Constraints for table `buku`
 --
 ALTER TABLE `buku`
   ADD CONSTRAINT `fk_buku_kategori1` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_buku_penerbit1` FOREIGN KEY (`id_penerbit`) REFERENCES `penerbit` (`id_penerbit`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Ketidakleluasaan untuk tabel `peminjaman`
+-- Constraints for table `peminjaman`
 --
 ALTER TABLE `peminjaman`
   ADD CONSTRAINT `fk_peminjaman_admin1` FOREIGN KEY (`id_admin`) REFERENCES `admin` (`id_admin`) ON DELETE NO ACTION ON UPDATE NO ACTION,
@@ -259,7 +266,7 @@ ALTER TABLE `peminjaman`
   ADD CONSTRAINT `fk_peminjaman_buku1` FOREIGN KEY (`buku_id_buku`) REFERENCES `buku` (`id_buku`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Ketidakleluasaan untuk tabel `pengembalian`
+-- Constraints for table `pengembalian`
 --
 ALTER TABLE `pengembalian`
   ADD CONSTRAINT `fk_pengembalian_admin1` FOREIGN KEY (`id_admin`) REFERENCES `admin` (`id_admin`) ON DELETE NO ACTION ON UPDATE NO ACTION,
