@@ -29,8 +29,9 @@
                         <td><?php echo $row->id_penerbit;?></td>
                         <td><?php echo $row->nama_penerbit;?></td>
                         <td> 
-                            <a class="btn btn-primary" href="<?php echo base_url('index.php/penerbit/edit/'.$row->id_penerbit);?>">edit</a>
-                            <a  class="btn btn-primary" href="<?php echo base_url('index.php/penerbit/hapus/'.$row->id_penerbit);?>">delete</a>
+                    <a  class="btn btn-warning" href="<?php echo base_url('index.php/penerbit/edit/'.$row->id_penerbit);?>">edit</a>
+                    <a  class="btn btn-danger" onclick="return confirm('Anda Yakin?, Data akan dihapus Permanen!'); href="<?php echo base_url('index.php/penerbit/hapusproses/'.$row->id_penerbit);?>">delete</a>
+                    <a  class="btn btn-info" href="<?php echo base_url('index.php/penerbit/detail/'.$row->id_penerbit);?>">detail</a>
                    </tr>
                 </td>
             </div>

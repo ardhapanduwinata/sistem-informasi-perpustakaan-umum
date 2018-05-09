@@ -12,7 +12,7 @@
     <a href="<?php echo base_url('index.php/buku/tambah');?>" class= "btn btn-primary btn-small">Tambah Data</a>
      <p>
         <div class="table-responsive">
-            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+            <table class="table table-striped table-bordered table-hover example" >
                 <thead>
                     <tr>
                     <th>No</th>
@@ -23,6 +23,7 @@
                     <th>Nama Penerbit</th>
                     <th>Nama Kategori</th>
                     <th>Lokasi</th>
+                    <th>Cover Buku</th>
                     <th>aksi</th>
                 </thead>
             <tbody>
@@ -30,26 +31,33 @@
                     <?php
 						$no = 1;
 						foreach ($data->result() as $row) {
-							$nama_penerbit	= $this->m_buku->getBukuById($row->id_penerbit)->row_array();
-							$nama_kategori	= $this->m_buku->getBukuById($row->id_kategori)->row_array();
-							$lokasi			= $this->m_buku->getBukuById($row->id_kategori)->row_array();
 						?>
                         <td><?php echo $no++; ?></td>
                         <td><?php echo $row->id_buku;?></td>
                         <td><?php echo $row->nama_buku;?></td>
                         <td><?php echo $row->pengarang;?></td>
                         <td><?php echo $row->tahun_terbit;?></td>
-                        <td><?php echo $nama_penerbit['id_penerbit'];?></td>
-                        <td><?php echo $nama_kategori['id_kategori'];?></td>
-                        <td><?php echo $lokasi['id_kategori'];?></td>
+                        <td><?php echo $row->nama_penerbit?></td>
+                        <td><?php echo $row->nama_kategori;?></td>
+                        <td><?php echo $row->lokasi;?></td>
+                        <td><img src="<?php echo base_url().'assets/path/'. $row->cover_buku;?>" width="50px" height="50px"></td>
                         <td>
                             <a class="btn btn-warning" href="<?php echo base_url('index.php/buku/edit/'.$row->id_buku);?>">edit</a>
-                            <a class="btn btn-danger" href="<?php echo base_url('index.php/buku/hapus/'.$row->id_buku);?>">delete</a>
+                            <a class="btn btn-danger" onclick="return confirm('Anda Yakin?, Data akan dihapus Permanen!'); " href="<?php echo base_url('index.php/buku/hapusproses/'.$row->id_buku);?>">delete</a>
                 		</td>
                    </tr>
-    		</tbody>
-    		</table>
+                <?php }?>
+            </tbody>
+            </table>
         </div>
-        <?php }?>
     </div>
-</body>             
+</body>   
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+    $('.example').DataTable();
+} );
+</script>          

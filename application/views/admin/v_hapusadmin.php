@@ -30,7 +30,7 @@
                                             <label>foto</label>
                                             <input class="form-control" type="text" name="foto" id="foto" value="<?php echo $data['foto'];?>" placeholder="foto" class="span3" required disabled>
                                             <br>
-                                            <button type="submit" class="btn btn-danger btn-sm">detele</button>
+                                            <button type="submit" onClick="return confirm('Hapus data ?')" class="btn btn-danger btn-sm">detele</button>
                                             <a href="<?php echo base_url('index.php/admin');?>" class="btn btn-default btn-sm">Kembali</a>
                                             </p>
                                         </div>                  

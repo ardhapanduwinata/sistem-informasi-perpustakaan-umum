@@ -10,6 +10,7 @@
     <link href="<?php echo base_url('assets/plugins/pace/pace-theme-big-counter.css');?>" rel="stylesheet" />
     <link href="<?php echo base_url('assets/css/style.css');?>" rel="stylesheet" />
     <link href="<?php echo base_url('assets/css/main-style.css');?>" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
     <!-- Page-Level CSS -->
     <link href="<?php echo base_url('assets/plugins/morris/morris-0.4.3.min.css');?>" rel="stylesheet" />
    </head>
@@ -30,7 +31,6 @@
     <!-- end wrapper -->
 
     <!-- Core Scripts - Include with every page -->
-    <script src="<?php echo base_url("assets/plugins/jquery-1.10.2.js");?>"></script>
     <script src="<?php echo base_url("assets/plugins/bootstrap/bootstrap.min.js");?>"></script>
     <script src="<?php echo base_url("assets/plugins/metisMenu/jquery.metisMenu.js");?>"></script>
     <script src="<?php echo base_url("assets/plugins/pace/pace.js");?>"></script>

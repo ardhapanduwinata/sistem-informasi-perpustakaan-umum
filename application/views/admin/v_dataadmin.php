@@ -11,7 +11,7 @@
     <a href="<?php echo base_url('index.php/admin/tambah');?>" class= "btn btn-primary btn-small">Tambah Data</a>
     <p>
         <div class="table-responsive">
-            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+            <table class="table table-striped table-bordered table-hover example" >
                 <thead>
                     <tr>
                     <th>No</th>
@@ -35,10 +35,10 @@
                         <td><?php echo $row->alamat_admin;?></td>
                         <td><?php echo $row->notelp_admin;?></td>
                         <td><?php echo $row->email_admin;?></td>
-                        <td><?php echo $row->foto;?></td>
+                        <td><img src="<?php echo base_url().'assets/path/'. $row->foto;?>" width="50px" height="50px"></td>
                         <td> 
                             <a class="btn btn-warning" href="<?php echo base_url('index.php/admin/edit/'.$row->id_admin);?>">edit</a>
-                            <a  class="btn btn-danger" href="<?php echo base_url('index.php/admin/hapus/'.$row->id_admin);?>">delete</a>
+                            <a  class="btn btn-danger" onclick="return confirm('Anda Yakin?, Data akan dihapus Permanen!'); href="<?php echo base_url('index.php/admin/hapusproses/'.$row->id_admin);?>" >delete</a>
                             <a  class="btn btn-info" href="<?php echo base_url('index.php/admin/detail/'.$row->id_admin);?>">detail</a>
                    </tr>
                 </td>
@@ -54,4 +54,13 @@
     </div>
     </body>
     </html>
-</table> 
+</table>
+
+<script src="<?php echo base_url("assets/plugins/jquery-1.10.2.js");?>"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+    $('.example').DataTable();
+} );
+</script>

@@ -31,8 +31,9 @@
                         <td><?php echo $row->nama_kategori;?></td>
                         <td><?php echo $row->lokasi;?></td>
                         <td> 
-                            <a class="btn btn-primary" href="<?php echo base_url('index.php/kategori/edit/'.$row->id_kategori);?>">edit</a>
-                            <a  class="btn btn-primary" href="<?php echo base_url('index.php/kategori/hapus/'.$row->id_kategori);?>">delete</a>
+                    <a  class="btn btn-warning" href="<?php echo base_url('index.php/kategori/edit/'.$row->id_kategori);?>">edit</a>
+                    <a  class="btn btn-danger" onclick="return confirm('Anda Yakin?, Data akan dihapus Permanen!'); href="<?php echo base_url('index.php/kategori/hapusproses/'.$row->id_kategori);?>">delete</a>
+                    <a  class="btn btn-info" href="<?php echo base_url('index.php/kategori/detail/'.$row->id_kategori);?>">detail</a>
                    </tr>
                 </td>
             </div>
