@@ -13,8 +13,12 @@ class M_buku extends CI_model {
 		buku.tahun_terbit,
 		penerbit.nama_penerbit,
 		kategori.nama_kategori,
+<<<<<<< HEAD
 		kategori.lokasi, 
 		buku.cover_buku
+=======
+		kategori.lokasi
+>>>>>>> c70f93819fdad8c0c188f376e52219bb606d0484
 		FROM
 		buku 
 		join penerbit on penerbit.id_penerbit = buku.id_penerbit
@@ -37,7 +41,14 @@ class M_buku extends CI_model {
 	}
 
 	public function cekid($id){
+<<<<<<< HEAD
 		return $this->db->query(" SELECT * from buku AS a join penerbit AS b on a.id_penerbit = b.id_penerbit join kategori AS c on a.id_kategori = c.id_kategori where id_buku='".$id."'");
+=======
+		$id=$this->db->query("select * from buku 
+							  join kategori on buku.id_kategori = kategori.nama_kategori
+							  join penerbit on buku.id_penerbit = penerbit.nama_penerbit");
+		return $id;
+>>>>>>> c70f93819fdad8c0c188f376e52219bb606d0484
 	}
 	function getupdate($info, $id){
 		$this->db->where($this->primary, $id);
