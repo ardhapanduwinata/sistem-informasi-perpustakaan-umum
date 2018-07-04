@@ -17,6 +17,6 @@ class House extends CI_Controller {
     {
         $data['content'] = 'content.php';
         $data['menu'] 	= 'menu.php';
-        $this->load->view('v_home', $data);
+        $this->load->view('login', $data);
     }
 }
