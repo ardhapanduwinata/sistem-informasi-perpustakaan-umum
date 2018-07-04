@@ -3,9 +3,15 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: Jul 04, 2018 at 05:43 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
+=======
+-- Waktu pembuatan: 09 Bulan Mei 2018 pada 06.00
+-- Versi server: 10.1.31-MariaDB
+-- Versi PHP: 7.2.3
+>>>>>>> b0286d461c2482509ee71f081acbcfbe89639527
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -34,16 +40,25 @@ CREATE TABLE `admin` (
   `alamat_admin` varchar(45) DEFAULT NULL,
   `notelp_admin` varchar(45) DEFAULT NULL,
   `email_admin` varchar(45) DEFAULT NULL,
+<<<<<<< HEAD
   `username` varchar(200) NOT NULL,
   `password` varchar(200) NOT NULL
+=======
+  `foto` varchar(200) NOT NULL
+>>>>>>> b0286d461c2482509ee71f081acbcfbe89639527
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `admin`
 --
 
+<<<<<<< HEAD
 INSERT INTO `admin` (`id_admin`, `nama_admin`, `alamat_admin`, `notelp_admin`, `email_admin`, `username`, `password`) VALUES
 (1, 'arwi', 'blabla', 'blabla', 'blabla', 'adminarwi', 'adminarwi');
+=======
+INSERT INTO `admin` (`id_admin`, `nama_admin`, `alamat_admin`, `notelp_admin`, `email_admin`, `foto`) VALUES
+(1, 'trinanda', 'malang', '3', 'trinsp11@gmail.com', 'user1.jpg');
+>>>>>>> b0286d461c2482509ee71f081acbcfbe89639527
 
 -- --------------------------------------------------------
 
@@ -57,10 +72,23 @@ CREATE TABLE `anggota` (
   `alamat_anggota` varchar(45) DEFAULT NULL,
   `notelp_anggota` varchar(45) DEFAULT NULL,
   `email_anggota` varchar(45) DEFAULT NULL,
+<<<<<<< HEAD
   `username` int(200) NOT NULL,
   `password` int(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+=======
+  `foto` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data untuk tabel `anggota`
+--
+
+INSERT INTO `anggota` (`id_anggota`, `nama_anggota`, `alamat_anggota`, `notelp_anggota`, `email_anggota`, `foto`) VALUES
+(1, 'arwi', 'malang', '209375027305', 'arwi@gmail.com', 'arwi elek banget.png');
+
+>>>>>>> b0286d461c2482509ee71f081acbcfbe89639527
 -- --------------------------------------------------------
 
 --
@@ -72,7 +100,11 @@ CREATE TABLE `buku` (
   `nama_buku` varchar(45) DEFAULT NULL,
   `pengarang` varchar(45) DEFAULT NULL,
   `tahun_terbit` varchar(45) DEFAULT NULL,
+<<<<<<< HEAD
   `cover_buku` varchar(255) NOT NULL,
+=======
+  `cover_buku` varchar(200) NOT NULL,
+>>>>>>> b0286d461c2482509ee71f081acbcfbe89639527
   `id_penerbit` int(11) NOT NULL,
   `id_kategori` int(11) NOT NULL,
   `sinopsis` text NOT NULL
@@ -85,7 +117,12 @@ CREATE TABLE `buku` (
 INSERT INTO `buku` (`id_buku`, `nama_buku`, `pengarang`, `tahun_terbit`, `cover_buku`, `id_penerbit`, `id_kategori`, `sinopsis`) VALUES
 (1, 'Man with Elephant', 'Ella Mckanzie', '2015', 'man-with-elephant.jpg', 1, 6, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
 (2, 'Out of Box', 'Suzanne Dudley', '2017', 'out-of-box.jpg', 1, 4, 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. '),
+<<<<<<< HEAD
 (3, 'Dutch(How to be Perfect)', 'Kathian Brands', '2016', 'dutch.jpg', 4, 8, 'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?');
+=======
+(3, 'Dutch(How to be Perfect)', 'Kathian Brands', '2016', 'dutch.jpg', 4, 8, 'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?'),
+(4, 'qwerqwe', 'qwtqrwrq', '2332', 'dutch1.jpg', 3, 1, '');
+>>>>>>> b0286d461c2482509ee71f081acbcfbe89639527
 
 -- --------------------------------------------------------
 
@@ -114,6 +151,7 @@ INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `lokasi`) VALUES
 (8, 'Novel Dewasa', 'AA0016'),
 (9, 'Pelajaran Fisika', 'AB0002'),
 (10, 'Pelajaran Biologi', 'AB0003');
+<<<<<<< HEAD
 
 -- --------------------------------------------------------
 
@@ -127,6 +165,8 @@ CREATE TABLE `login` (
   `password` varchar(200) NOT NULL,
   `role` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+=======
+>>>>>>> b0286d461c2482509ee71f081acbcfbe89639527
 
 -- --------------------------------------------------------
 
@@ -209,6 +249,7 @@ ALTER TABLE `kategori`
   ADD PRIMARY KEY (`id_kategori`);
 
 --
+<<<<<<< HEAD
 -- Indexes for table `login`
 --
 ALTER TABLE `login`
@@ -216,6 +257,9 @@ ALTER TABLE `login`
 
 --
 -- Indexes for table `peminjaman`
+=======
+-- Indeks untuk tabel `peminjaman`
+>>>>>>> b0286d461c2482509ee71f081acbcfbe89639527
 --
 ALTER TABLE `peminjaman`
   ADD PRIMARY KEY (`id_peminjaman`,`id_anggota`,`buku_id_buku`,`id_admin`),
@@ -242,6 +286,7 @@ ALTER TABLE `pengembalian`
 --
 
 --
+<<<<<<< HEAD
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
@@ -281,6 +326,49 @@ ALTER TABLE `penerbit`
 --
 ALTER TABLE `pengembalian`
   MODIFY `id_pengembalian` int(11) NOT NULL AUTO_INCREMENT;
+=======
+-- AUTO_INCREMENT untuk tabel `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT untuk tabel `anggota`
+--
+ALTER TABLE `anggota`
+  MODIFY `id_anggota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT untuk tabel `buku`
+--
+ALTER TABLE `buku`
+  MODIFY `id_buku` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT untuk tabel `kategori`
+--
+ALTER TABLE `kategori`
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT untuk tabel `peminjaman`
+--
+ALTER TABLE `peminjaman`
+  MODIFY `id_peminjaman` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `penerbit`
+--
+ALTER TABLE `penerbit`
+  MODIFY `id_penerbit` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT untuk tabel `pengembalian`
+--
+ALTER TABLE `pengembalian`
+  MODIFY `id_pengembalian` int(11) NOT NULL AUTO_INCREMENT;
+
+>>>>>>> b0286d461c2482509ee71f081acbcfbe89639527
 --
 -- Constraints for dumped tables
 --

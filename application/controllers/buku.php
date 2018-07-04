@@ -137,4 +137,9 @@ public function Hapus($id)
 			redirect('buku');
 	
 	}
+	public function viewBook($id){
+		
+     $data['records'] = $this->m_buku->getOne($id); 
+         $this->load->view('buku/buku_view',$data); 
+   }
  }
