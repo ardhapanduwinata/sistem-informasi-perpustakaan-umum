@@ -111,6 +111,9 @@
                             <li>
                                 <a href="#">Denda</a>
                             </li>
+                            <li>
+                                <a href="<?php echo base_url('login/logout') ;?>">Sign Out</a>
+                            </li>
                         </ul>
                         <!-- second-level-items -->
                     </li>

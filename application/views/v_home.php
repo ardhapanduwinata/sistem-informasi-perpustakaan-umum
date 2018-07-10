@@ -18,9 +18,9 @@
     <!--  wrapper -->
     <div id="wrapper">
         <!-- navbar top -->
-<?php include $menu;?>
+<?php $this->load->view('menu')?>
         <!-- end navbar side -->
-<?php include $content;?>        <!--  page-wrapper -->
+<?php $this->load->view('content')?>        <!--  page-wrapper -->
 
 
 

@@ -1,4 +1,7 @@
-        <div id="page-wrapper">
+<?php $this->load->library('session');
+$this->session->userdata('nama');
+?>
+            <div id="page-wrapper">
 
             <div class="row">
                 <!-- Page Header -->
@@ -12,7 +15,7 @@
                 <!-- Welcome -->
                 <div class="col-lg-12">
                     <div class="alert alert-info">
-                        <i class="fa fa-folder-open"></i><b>&nbsp;Hello ! </b>Welcome Back <b>Tri Nanda Satrio Purnomo </b>
+                        <i class="fa fa-folder-open"></i><b>&nbsp;Hello ! </b>Welcome Back <b><?php echo $this->session->userdata('nama')?></b>
  <i class="fa  fa-pencil"></i><b>&nbsp;2,000 </b>Support Tickets Pending to Answere.
                     </div>
                 </div>
@@ -327,7 +330,7 @@
                                     </li>
                                     <li class="divider"></li>
                                     <li>
-                                        <a href="#">
+                                        <a href="<?php base_url('login/logout') ?>">
                                             <i class="fa fa-sign-out fa-fw"></i>Sign Out
                                         </a>
                                     </li>

@@ -17,11 +17,7 @@
                     <a class="nav-link" href="#">Sign Up</a>
                 </li>
                 <li class="nav-item">
-<<<<<<< HEAD
-                    <a class="nav-link" href="<?= base_url() ?>index.php/login/kelogin">Log In</a>
-=======
-                    <a class="nav-link" href="<?= base_url() ?>index.php/house/login">Admin</a>
->>>>>>> b0286d461c2482509ee71f081acbcfbe89639527
+                    <a class="nav-link" href="<?= base_url() ?>index.php/login">Log In</a>
                 </li>
             </ul>
         </div>
@@ -48,11 +44,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 order-lg-2">
                     <div class="p-5">
-<<<<<<< HEAD
                         <img style="width: 250px;" src="<?= base_url('assets/img/') . $key['cover_buku'] ?>" alt="">
-=======
-                        <img style="width: 250px;" src="<?= base_url('assets/path/') . $key['cover_buku'] ?>" alt="">
->>>>>>> b0286d461c2482509ee71f081acbcfbe89639527
                     </div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
@@ -71,11 +63,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="p-5">
-<<<<<<< HEAD
                         <img style="width: 250px;" src="<?= base_url('assets/img/') . $key['cover_buku'] ?>" alt="">
-=======
-                        <img style="width: 250px;" src="<?= base_url('assets/path/') . $key['cover_buku'] ?>" alt="">
->>>>>>> b0286d461c2482509ee71f081acbcfbe89639527
                     </div>
                 </div>
                 <div class="col-lg-6">

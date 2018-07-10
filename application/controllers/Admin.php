@@ -5,6 +5,9 @@ class Admin extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->model('m_admin');
+        if($this->session->userdata('status') != "login"){
+            redirect(base_url("login"));
+        }
 
 	}
 
@@ -116,7 +119,6 @@ class Admin extends CI_Controller {
 		// }
 	}
 
-
 	public function Hapus($id)
 	{	
 		$data['menu']		='menu.php';
@@ -125,10 +127,11 @@ class Admin extends CI_Controller {
 		$this->load->view('v_home.php',$data);
 
 	}
+
 	public function hapusproses($id)
 	{
 		$this->m_admin->hapus($id);
 		redirect('admin');
-
 	}
+
 }
