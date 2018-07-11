@@ -9,8 +9,10 @@ class House extends CI_Controller {
     }
 	public function index()
 	{
+        $this->load->view('header');
         $data['array_buku']=$this->m_house->getBuku();
 		$this->load->view('house', $data);
+        $this->load->view('footer');
 	}
 
 	public function login()

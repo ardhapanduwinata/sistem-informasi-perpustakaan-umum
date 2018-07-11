@@ -1,34 +1,14 @@
 
-<?php $this->load->view('header&footer/header') ?>
 
 <title>One Page Wonder - Start Bootstrap Template</title>
 
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">Our Library</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sign Up</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url() ?>index.php/login">Log In</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+
 
 <header class="masthead text-center text-white">
     <div class="masthead-content">
         <div class="container">
-            <h1 class="masthead-heading mb-0">Welcome </h1>
-            <h2 class="masthead-subheading mb-0">to our Library </h2>
+            <h1 class="masthead-heading mb-0">  Perpustakaan Online </h1>
+            <h2 class="masthead-subheading mb-0">Malang Raya </h2>
            
         </div>
     </div>
@@ -78,4 +58,3 @@
     </section>
     <?php }
      } ?>
-<?php $this->load->view('header&footer/footer') ?>

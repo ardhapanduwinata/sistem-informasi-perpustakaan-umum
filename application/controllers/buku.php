@@ -138,8 +138,9 @@ public function Hapus($id)
 	
 	}
 	public function viewBook($id){
-		
+	$this->load->view('header');
      $data['records'] = $this->m_buku->getOne($id); 
          $this->load->view('buku/buku_view',$data); 
+    $this->load->view('footer');
    }
  }
