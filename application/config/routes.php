@@ -52,3 +52,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'house';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['requestPinjam/(:any)/(:any)'] = 'Member/requestPinjam';
+$route['requestPengembalian/(:any)/(:any)'] = 'Member/requestPengembalian';

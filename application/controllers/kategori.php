@@ -5,7 +5,9 @@ class kategori extends CI_Controller {
 	function __construct(){
         parent::__construct();
 		$this->load->model('m_kategori');
-        
+        if($this->session->userdata('status') != "admin"){
+            redirect(site_url("house/login"));
+        }
     }
 
 	public function index()

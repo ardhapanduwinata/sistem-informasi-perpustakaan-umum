@@ -5,7 +5,9 @@ class Anggota extends CI_Controller {
 	function __construct(){
         parent::__construct();
 		$this->load->model('m_anggota');
-        
+        if($this->session->userdata('status') != "admin"){
+            redirect(site_url("house/login"));
+        }
     }
 
 	public function index()
@@ -33,10 +35,12 @@ class Anggota extends CI_Controller {
 
 	public function editproses($id)
 	{
-		$nama_anggota=$this->input->post('nama_anggota'); 
+		$nama_anggota=$this->input->post('nama_anggota');
 		$alamat_anggota=$this->input->post('alamat_anggota'); 
 		$notelp_anggota=$this->input->post('notelp_anggota'); 
 		$email_anggota=$this->input->post('email_anggota');
+		$username=$this->input->post('username');
+		$password=$this->input->post('password'); 
 		$foto=$this->input->post('foto');
 
 			$info=array(
@@ -45,6 +49,8 @@ class Anggota extends CI_Controller {
 				'alamat_anggota'=>$alamat_anggota,
 				'notelp_anggota'=>$notelp_anggota,
 				'email_anggota'=>$email_anggota,
+				'username'=>$username,
+				'password'=>$password,
 				'foto'=>$foto,
 			);
 			$this->m_anggota->getupdate($info, $id);
@@ -55,10 +61,12 @@ class Anggota extends CI_Controller {
 	public function simpan()
 	{
 		$id_anggota=$this->input->post('id_anggota');
-		$nama_anggota=$this->input->post('nama_anggota'); 
+		$nama_anggota=$this->input->post('nama_anggota');
 		$alamat_anggota=$this->input->post('alamat_anggota'); 
 		$notelp_anggota=$this->input->post('notelp_anggota'); 
 		$email_anggota=$this->input->post('email_anggota');
+		$username=$this->input->post('username');
+		$password=$this->input->post('password'); 
 		$foto=$this->input->post('foto');
 		$cek=$this->m_anggota->getdataanggota($id_anggota);
 		if($cek->num_rows()>0){ 				
@@ -70,6 +78,8 @@ class Anggota extends CI_Controller {
 				'alamat_anggota'=>$alamat_anggota,
 				'notelp_anggota'=>$notelp_anggota,
 				'email_anggota'=>$email_anggota,
+				'username'=>$username,
+				'password'=>$password,
 				'foto'=>$foto,
 			);
 			$this->m_anggota->getinsert($info);

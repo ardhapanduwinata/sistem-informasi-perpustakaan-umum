@@ -5,8 +5,8 @@ class Admin extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->model('m_admin');
-        if($this->session->userdata('status') != "login"){
-            redirect(base_url("login"));
+        if($this->session->userdata('status') != "admin"){
+            redirect(site_url("house/login"));
         }
 
 	}

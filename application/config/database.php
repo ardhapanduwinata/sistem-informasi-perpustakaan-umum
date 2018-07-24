@@ -78,6 +78,7 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
+	'port' 	   => '3307',
 	'database' => 'perpustakaan',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

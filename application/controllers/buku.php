@@ -5,7 +5,9 @@ class Buku extends CI_Controller {
 	function __construct(){
         parent::__construct();
 		$this->load->model('m_buku');
-        
+        if($this->session->userdata('status') != "admin"){
+            redirect(site_url("house/login"));
+        }
     }
 
 	public function index()
@@ -138,9 +140,8 @@ public function Hapus($id)
 	
 	}
 	public function viewBook($id){
-	$this->load->view('header');
+		
      $data['records'] = $this->m_buku->getOne($id); 
          $this->load->view('buku/buku_view',$data); 
-    $this->load->view('footer');
    }
  }

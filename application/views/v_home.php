@@ -20,7 +20,7 @@
         <!-- navbar top -->
 <?php $this->load->view('menu')?>
         <!-- end navbar side -->
-<?php $this->load->view('content')?>        <!--  page-wrapper -->
+<?php $this->load->view($content)?>        <!--  page-wrapper -->
 
 
 
@@ -31,6 +31,7 @@
     <!-- end wrapper -->
 
     <!-- Core Scripts - Include with every page -->
+    <script src="<?php echo base_url("assets/vendor/jquery/jquery.min.js");?>"></script>
     <script src="<?php echo base_url("assets/plugins/bootstrap/bootstrap.min.js");?>"></script>
     <script src="<?php echo base_url("assets/plugins/metisMenu/jquery.metisMenu.js");?>"></script>
     <script src="<?php echo base_url("assets/plugins/pace/pace.js");?>"></script>

@@ -26,7 +26,7 @@
                     <!-- dropdown user-->
                     <ul class="dropdown-menu dropdown-user">
                         <li class="divider"></li>
-                        <li><a href="<?php echo base_url('index.php/logout.php');?>"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                        <li><a href="<?php echo site_url('login/logout') ;?>"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
                         </li>
                     </ul>
                     <!-- end dropdown-user -->
@@ -48,7 +48,7 @@
                                 <img src="<?php echo base_url('assets/img/user.jpg');?>" alt="">
                             </div>
                             <div class="user-info">
-                                <div>Tri <strong>Nanda</strong></div>
+                                <div><strong><?=$this->session->userdata('nama_admin')?></strong></div>
                                 <div class="user-text-online">
                                     <span class="user-circle-online btn btn-success btn-circle "></span>&nbsp;Online
                                 </div>
@@ -103,16 +103,13 @@
                         <a href="#"><i class="fa fa-sitemap fa-fw"></i>Transaksi<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">Peminjaman</a>
+                                <a href="<?php echo base_url('index.php/pinjam');?>">Peminjaman</a>
                             </li>
                             <li>
-                                <a href="#">Pengembalian</a>
+                                <a href="<?php echo base_url('index.php/pinjam/datapengembalian');?>">Pengembalian</a>
                             </li>
                             <li>
                                 <a href="#">Denda</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo base_url('login/logout') ;?>">Sign Out</a>
                             </li>
                         </ul>
                         <!-- second-level-items -->

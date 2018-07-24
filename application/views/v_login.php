@@ -5,7 +5,7 @@
 
 <div class="container" style="padding-left: 400px; padding-right: 400px">
     <center>
-        <?php echo form_open('login');
+        <?php echo form_open('login/aksi_login');
         echo validation_errors('<div class = "alert alert-danger">', '</div>');
         ?>
         <legend>LOGIN</legend>
