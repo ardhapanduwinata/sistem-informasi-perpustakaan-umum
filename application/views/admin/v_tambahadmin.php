@@ -27,7 +27,7 @@
                                         </div>
                                         <div>
                                             <label>foto</label>
-                                            <input class="form-control" type="file" name="foto" id="foto" class="span3" required>
+                                            <input class="form-control" type="file" name="cover_admin" id="cover_admin" class="span3" required>
                                             <br>
                                             <button type="submit" class="btn btn-success btn-sm">Simpan</button>
                                             <a href="<?php echo base_url('index.php/admin');?>" class="btn btn-default btn-sm">Kembali</a>

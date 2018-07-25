@@ -40,14 +40,14 @@ class Admin extends CI_Controller {
 		$alamat_admin=$this->input->post('alamat_admin'); 
 		$notelp_admin=$this->input->post('notelp_admin'); 
 		$email_admin=$this->input->post('email_admin');
-		$foto=$_FILES['foto']['name'];
-		if($foto=''){}else
+		$cover_admin=$_FILES['cover_admin']['name'];
+		if($cover_admin=''){}else
 		{
 			$this->load->library('upload');
 			$config['upload_path']          = './assets/path/';
             $config['allowed_types']        = 'gif|jpg|png';
             $this->upload->initialize($config);
-			if(! $this->upload->do_upload('foto'))
+			if(! $this->upload->do_upload('cover_admin'))
 			{
 				$error=array('error'=>$this->upload->display_errors());
 				print_r($error); die ();
@@ -55,7 +55,7 @@ class Admin extends CI_Controller {
 			else
 			{
 				unlink('./assets/path/'.$this->input->post('foto_old'));
-				$foto=$this->upload->data('file_name');
+				$cover_admin=$this->upload->data('file_name');
 			}
 		}
 
@@ -65,7 +65,7 @@ class Admin extends CI_Controller {
 			'alamat_admin'=>$alamat_admin,
 			'notelp_admin'=>$notelp_admin,
 			'email_admin'=>$email_admin,
-			'foto'=>$foto,
+			'cover_admin'=>$cover_admin,
 		);
 		$this->m_admin->getupdate($info, $id);
 		redirect('admin');
@@ -79,9 +79,9 @@ class Admin extends CI_Controller {
 		$alamat_admin=$this->input->post('alamat_admin'); 
 		$notelp_admin=$this->input->post('notelp_admin'); 
 		$email_admin=$this->input->post('email_admin');
-		$foto=$_FILES['foto']['name'];
+		$cover_admin=$_FILES['cover_admin']['name'];
 
-		if($foto='')
+		if($cover_admin='')
 		{
 
 		}
@@ -91,14 +91,14 @@ class Admin extends CI_Controller {
 			$config['upload_path']          = './assets/path/';
             $config['allowed_types']        = 'gif|jpg|png';
             $this->upload->initialize($config);
-			if(! $this->upload->do_upload('foto'))
+			if(! $this->upload->do_upload('cover_admin'))
 			{
 				$error=array('error'=>$this->upload->display_errors());
 				print_r($error); die ();
 			}
 			else
 			{
-				$foto=$this->upload->data('file_name');
+				$cover_admin=$this->upload->data('file_name');
 			}
 		}
 		// $cek=$this->m_admin->getdataadmin($id_admin);
@@ -111,7 +111,7 @@ class Admin extends CI_Controller {
 			'alamat_admin'=>$alamat_admin,
 			'notelp_admin'=>$notelp_admin,
 			'email_admin'=>$email_admin,
-			'foto'=>$foto
+			'cover_admin'=>$cover_admin
 		);
 		$this->db->insert('admin',$info);
 			// $this->m_admin->getinsert($info);
