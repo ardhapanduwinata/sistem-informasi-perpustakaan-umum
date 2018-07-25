@@ -18,6 +18,7 @@
                     <th>Id Peminjaman</th>
                     <th>Tanggal Pinjam</th>
                     <th>Tanggal Kembali</th>
+                    <th>Denda</th>
                     <th>Nama Buku</th>
                     <th>Nama Pengarang</th>
                     <th>Nama Peminjam</th>
@@ -36,6 +37,16 @@
                         <td><?php echo $row->id_peminjaman;?></td>
                         <td><?php echo $row->tanggal_peminjaman;?></td>
                         <td><?php echo $row->tanggal_pengembalian;?></td>
+                        <td>
+                            <?php 
+                            $date1 = new DateTime($row->tanggal_peminjaman);
+                            $date1 = $date1->add(new DateInterval('P7D'));
+                            $date2 = new DateTime(date("Y-m-d"));
+                            $datediff = $date1->diff($date2);
+                            $jml_hari = $datediff->days;
+                            echo ($date1 < $date2 ? $jml_hari*2000 : "Belum Didenda");
+                            ?>        
+                        </td>
                         <td><?php echo $row->nama_buku;?></td>
                         <td><?php echo $row->pengarang;?></td>
                         <td><?php echo $row->nama_anggota;?></td>

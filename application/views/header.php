@@ -30,7 +30,7 @@
             <ul class="navbar-nav ml-auto">
                 <?php if(!$this->session->userdata('id_anggota')){ ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="glyphicon glyphicon-user-plus"></span> Sign Up</a>
+                        <a class="nav-link" href="<?= base_url() ?>index.php/register"><span class="glyphicon glyphicon-user-plus"></span> Sign Up</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?= base_url() ?>index.php/login"><span class="glyphicon glyphicon-sign-in"></span> Log In</a>
@@ -44,6 +44,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="<?= base_url() ?>index.php/Member/pengembalian">Pengembalian</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= base_url() ?>index.php/Member/edit_profile">Edit Profile</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="<?= base_url() ?>index.php/login/logout"><span class="glyphicon glyphicon-sign-out"></span> LogOut</a>

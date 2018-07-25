@@ -11,7 +11,7 @@
     <a href="<?php echo base_url('index.php/admin/tambah');?>" class= "btn btn-primary btn-small">Tambah Data</a>
     <p>
         <div class="table-responsive">
-            <table class="table table-striped table-bordered table-hover example" >
+            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                 <thead>
                     <tr>
                     <th>No</th>

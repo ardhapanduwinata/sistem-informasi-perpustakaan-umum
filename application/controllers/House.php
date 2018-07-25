@@ -26,11 +26,14 @@ class House extends CI_Controller {
     public function ViewMore()
     {
         $data['rows'] = $this->db->where('id_buku',$this->uri->segment(3))->get('buku')->row_array();
+
         $this->load->view('buku/buku_view.php',$data);
     }
     public function ViewMorePengembalian()
     {
         $data['rows'] = $this->db->where('id_buku',$this->uri->segment(3))->get('buku')->row_array();
+        $data['pengembalian'] = $this->db->where('id_peminjaman',$this->uri->segment(4))->get('peminjaman')->row_array();
+       
         $this->load->view('buku/buku_viewPinjam.php',$data);
     }
     public function buku()

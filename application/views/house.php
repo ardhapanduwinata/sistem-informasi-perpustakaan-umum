@@ -2,23 +2,20 @@
 
 <title>One Page Wonder - Start Bootstrap Template</title>
 
-
-
-<header class="masthead text-center text-white">
+<header class="masthead text-center text-white" style="height: 100px;">
     <div class="masthead-content">
-        <div class="container">
+        <div class="container" style="margin-top:-8rem;">
             <h1 class="masthead-heading mb-0">  Perpustakaan Online </h1>
             <h2 class="masthead-subheading mb-0">Malang Raya </h2>
-           
         </div>
 
     </div>
     <br>
     <br>
-    <div class="bg-circle-1 bg-circle"></div>
+    <!-- <div class="bg-circle-1 bg-circle"></div>
     <div class="bg-circle-2 bg-circle"></div>
     <div class="bg-circle-3 bg-circle"></div>
-    <div class="bg-circle-4 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div> -->
 
 </header>
 <?php foreach ($array_buku as $key) {

@@ -59,4 +59,39 @@ class Member extends CI_Controller {
         $data['history']=$this->m_house->gethistory();
         $this->load->view('history',$data);
     }
+    public function edit_profile()
+    {
+    	$data['rows'] = $this->db->where('id_anggota',$this->session->userdata('id_anggota'))->get('anggota')->row_array();
+    	$this->load->library('form_validation');
+        $this->form_validation->set_rules('nama_anggota','Nama','required');
+        $this->form_validation->set_rules('alamat_anggota','alamat','required');
+        $this->form_validation->set_rules('notelp_anggota','notelp','required');
+        $this->form_validation->set_rules('email_anggota','email','required');
+        $this->form_validation->set_rules('username','username','required');
+        $this->form_validation->set_rules('password','password','required');
+        if ($this->form_validation->run() == false) {
+            $this->load->view('edit_profile',$data);
+        }else{
+            $config['upload_path'] = './assets/path/';
+            $config['allowed_types'] = 'gif|jpg|png';
+            $config['max_size']  = '10000';
+            $config['max_width']  = '10240';
+            $config['max_height']  = '7680';
+            
+            $this->load->library('upload', $config);
+            
+            if ( ! $this->upload->do_upload('foto')){
+                $data['error'] = $this->upload->display_errors();
+                $this->load->view('edit_profile',$data);
+            }
+            else{
+                $post = $this->input->post();
+                $post['password'] = md5($post['password']);
+                $post['foto'] = $this->upload->data('file_name');
+                $this->db->where('id_anggota',$this->session->userdata('id_anggota'))->update('anggota',$post);
+                redirect('House/buku','refresh');
+            }
+
+        }
+    }
 }
