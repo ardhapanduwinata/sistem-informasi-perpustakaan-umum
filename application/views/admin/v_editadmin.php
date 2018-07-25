@@ -32,7 +32,17 @@
                                             <label>foto</label>
                                             <input class="form-control" type="file" name="cover_admin" id="cover_admin"  class="span3"  required>
                                             <br>
+                                        <div class="form-group">
+                                            <label>username</label>
+                                            <input class="form-control" type="text" name="username" id="username" placeholder="username" value="<?php echo $data['username'];?>" class="span3" required>
+                                            <input class="form-control" type="hidden" name="foto_old"  value="<?php echo $data['username'];?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>password</label>
+                                            <input class="form-control" type="password" name="password" id="password" placeholder="password" value="<?php echo $data['password'];?>" class="span3" required>
+                                            <input class="form-control" type="hidden" name="foto_old"  value="<?php echo $data['password'];?>">
+                                        </div>                  
                                             <button type="submit" class="btn btn-success btn-sm">Edit</button>
                                             <a href="<?php echo base_url('index.php/admin');?>" class="btn btn-default btn-sm">Kembali</a>
                                             </p>
-                                        </div>                  
+                                        </div>
