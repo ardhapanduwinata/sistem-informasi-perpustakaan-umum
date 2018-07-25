@@ -53,4 +53,16 @@ class M_buku extends CI_model {
 		$this->db->where($this->primary, $id);
 		$this->db->delete($this->table);
 	}
+	public function get_all_artikel($limit = FALSE, $offset = FALSE)
+    {
+        if($limit){
+            $this->db->limit($limit,$offset);
+        }
+        $query = $this->db->get('buku');
+        return $query->result_array();
+    }
+    public function get_total()
+    {
+        return $this->db->count_all('buku');
+    }
 }

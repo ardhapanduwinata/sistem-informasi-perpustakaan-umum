@@ -11,11 +11,15 @@
             <h2 class="masthead-subheading mb-0">Malang Raya </h2>
            
         </div>
+
     </div>
+    <br>
+    <br>
     <div class="bg-circle-1 bg-circle"></div>
     <div class="bg-circle-2 bg-circle"></div>
     <div class="bg-circle-3 bg-circle"></div>
     <div class="bg-circle-4 bg-circle"></div>
+
 </header>
 <?php foreach ($array_buku as $key) {
     if (($key['id_buku'])%2 == 0) { ?>
@@ -61,10 +65,26 @@
                         <a class="btn btn-outline-primary"  href="<?php echo site_url('house/ViewMore/'.$key['id_buku']);?>">View More</a>
                         <?php }?>
                     </div>
+                     
                 </div>
             </div>
         </div>
+       
     </section>
+    
+    <script src="<?php echo base_url("assets/plugins/jquery-1.10.2.js");?>"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+    $('.example').DataTable();
+} );
+</script>
     <?php }
      } ?>
+     <?php
+        if(isset($links)){
+            echo $links;
+        }
+        ?>
      <?php $this->load->view('footer.php');?>

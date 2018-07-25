@@ -32,10 +32,11 @@
           <a href="<?=site_url('house/login')?>" class="btn btn-info">Pinjam Buku</a>
           <?php }?>
         </div>
-      
-</div>
+
 </div>
 </div>
     </main>
+     <?php $this->load->view('footer.php');?>
+
 
 
