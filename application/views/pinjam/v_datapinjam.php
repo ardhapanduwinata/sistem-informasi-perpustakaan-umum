@@ -11,7 +11,7 @@
   <div class="panel-body">
      <p>
         <div class="table-responsive">
-            <table class="table table-striped table-bordered table-hover example" >
+            <table class="table table-striped table-bordered table-hover" id="dataTables-export">
                 <thead>
                     <tr>
                     <th>No</th>
