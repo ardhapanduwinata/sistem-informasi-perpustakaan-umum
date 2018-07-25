@@ -35,11 +35,10 @@
                         <td><?php echo $row->alamat_anggota;?></td>
                         <td><?php echo $row->notelp_anggota;?></td>
                         <td><?php echo $row->email_anggota;?></td>
-                        <td><?php echo $row->foto;?></td>
+                        <td><img src="<?php echo base_url().'assets/path/'. $row->foto;?>" width="50px" height="50px"></td>
                         <td> 
                         <a  class="btn btn-warning" href="<?php echo base_url('index.php/anggota/edit/'.$row->id_anggota);?>">edit</a>
                         <a  class="btn btn-danger" onclick="return confirm('Anda Yakin?, Data akan dihapus Permanen!'); href="<?php echo base_url('index.php/anggota/hapusproses/'.$row->id_anggota);?>">delete</a>
-                        <a  class="btn btn-info" href="<?php echo base_url('index.php/anggota/detail/'.$row->id_anggota);?>">detail</a>
                    </tr>
                 </td>
             </div>
