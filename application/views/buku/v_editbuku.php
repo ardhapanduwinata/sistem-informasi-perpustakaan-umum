@@ -38,6 +38,10 @@
                                                     
                                                 <?php } ?>
                                             </select>
+                                             <div class="form-group">
+                                            <label>Sinopsis</label>
+                                            <input class="form-control" type="text" name="sinopsis" id="sinopsis" placeholder="Sinopsis" class="span3" value="<?php echo $data['sinopsis'];?>" required>
+                                        </div>
                                              <input class="form-control" type="hidden" name="foto_old"  value="<?php echo $data['cover_buku'];?>">
                                             <label>foto</label>
                                             <input class="form-control" type="file" name="cover_buku" id="cover_buku"  class="span3"  required>

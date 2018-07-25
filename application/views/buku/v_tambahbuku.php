@@ -38,6 +38,10 @@
                                                 <?php } ?>
                                             </select>
                                         <div>
+                                            <div class="form-group">
+                                            <label>Sinopsis</label>
+                                            <input class="form-control" type="text" name="sinopsis" id="sinopsis" placeholder="Sinopsis" class="span3" lass="span3" required>
+                                        </div>
                                         <label>foto</label>
                                             <input class="form-control" type="file" name="cover_buku" id="cover_buku" class="span3" required>
                                             <br>

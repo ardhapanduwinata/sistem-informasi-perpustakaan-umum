@@ -22,7 +22,7 @@
              <img src="<?php echo  base_url() ?>assets/path/<?php echo $rows['cover_buku']  ?>" alt=" " class="img-fluid" width="50%">
           </div>
         <div class="col-md-2"> </div>
-           <div class="col-8">
+           <div class="col-12">
           <p><center><?php echo $rows['sinopsis'] ?></center></p>
         </div>
         <div class="col-md-12 text-center">

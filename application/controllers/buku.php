@@ -34,6 +34,7 @@ class Buku extends CI_Controller {
 		$tahun_terbit=$this->input->post('tahun_terbit');
 		$nama_penerbit=$this->input->post('nama_penerbit');
 		$nama_kategori=$this->input->post('nama_kategori');
+		$sinopsis=$this->input->post('sinopsis');
 		$cover_buku=$_FILES['cover_buku']['name'];
 
 		if($foto='')
@@ -63,6 +64,7 @@ class Buku extends CI_Controller {
 				'tahun_terbit'=>$tahun_terbit,
 				'id_penerbit'=>$nama_penerbit,
 				'id_kategori'=>$nama_kategori,
+				'sinopsis'=>$sinopsis,
 				'cover_buku'=>$cover_buku
 			);
 			$this->m_buku->getinsert($info);
@@ -88,6 +90,7 @@ class Buku extends CI_Controller {
 		$tahun_terbit=$this->input->post('tahun_terbit');
 		$nama_penerbit=$this->input->post('nama_penerbit');
 		$nama_kategori=$this->input->post('nama_kategori');
+		$sinopsis=$this->input->post('sinopsis');
 		$cover_buku=$_FILES['cover_buku']['name'];
 
 		if($foto='')
@@ -118,6 +121,7 @@ class Buku extends CI_Controller {
 				'tahun_terbit'=>$tahun_terbit,
 				'id_penerbit'=>$nama_penerbit,
 				'id_kategori'=>$nama_kategori,
+				'sinopsis'=>$sinopsis,
 				'cover_buku'=>$cover_buku
 			);
 			$this->m_buku->getupdate($info, $id);

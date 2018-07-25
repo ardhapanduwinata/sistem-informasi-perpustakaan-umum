@@ -20,7 +20,8 @@ class M_buku extends CI_model {
 		penerbit.nama_penerbit,
 		kategori.nama_kategori,
 		kategori.lokasi, 
-		buku.cover_buku
+		buku.cover_buku,
+		buku.sinopsis
 		FROM
 		buku 
 		join penerbit on penerbit.id_penerbit = buku.id_penerbit

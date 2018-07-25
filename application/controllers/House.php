@@ -12,7 +12,7 @@ class House extends CI_Controller {
 	{
         $data['array_buku']=$this->m_house->getBuku();
 		$this->load->view('house', $data);
-
+        redirect(site_url("house/buku"));
         
 }
 

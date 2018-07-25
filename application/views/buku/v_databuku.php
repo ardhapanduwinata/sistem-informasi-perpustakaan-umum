@@ -22,6 +22,7 @@
                     <th>Tahun Terbit</th>
                     <th>Nama Penerbit</th>
                     <th>Nama Kategori</th>
+                    <th>sinopsis</th>
                     <th>Lokasi</th>
                     <th>Cover Buku</th>
                     <th>aksi</th>
@@ -39,6 +40,7 @@
                         <td><?php echo $row->tahun_terbit;?></td>
                         <td><?php echo $row->nama_penerbit?></td>
                         <td><?php echo $row->nama_kategori;?></td>
+                        <td><?php echo $row->sinopsis;?></td>
                         <td><?php echo $row->lokasi;?></td>
                         <td><img src="<?php echo base_url().'assets/path/'. $row->cover_buku;?>" width="50px" height="50px"></td>
                         <td>
