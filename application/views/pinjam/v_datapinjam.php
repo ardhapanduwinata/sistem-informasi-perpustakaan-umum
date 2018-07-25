@@ -3,13 +3,12 @@
       <div class="row">
                 <!-- Page Header -->
                 <div class="col-lg-12">
-                    <h1 class="page-header">Peminjaman</h1>
+                    <h1 class="page-header">Transaksi</h1>
                 </div>
                 <!--End Page Header -->
             </div>
 <body>
   <div class="panel-body">
-    <a href="<?php echo base_url('index.php/peminjaman/tambah');?>" class= "btn btn-primary btn-small">Tambah Data</a>
      <p>
         <div class="table-responsive">
             <table class="table table-striped table-bordered table-hover example" >
@@ -59,12 +58,11 @@
         </div>
     </div>
 </body>   
-
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets_datatables\DataTables\assets_ajax\js/jquery.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets_datatables\DataTables\assets_ajax\js/bootstrap.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets_datatables\DataTables\assets_ajax\js/jquery.dataTables.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
     $('.example').DataTable();
 } );
-</script>          
+</script>

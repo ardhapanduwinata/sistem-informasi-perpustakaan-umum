@@ -39,6 +39,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#"><span class="glyphicon glyphicon-blind"></span> <?=$this->session->userdata('nama_anggota')?></a>
                         </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="<?= base_url() ?>index.php/Member/history">History Peminajaman</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="<?= base_url() ?>index.php/Member/pengembalian">Pengembalian</a>
                         </li>

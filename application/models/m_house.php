@@ -33,4 +33,16 @@ class M_house extends CI_model {
 			AND a.status = 'Pinjam'");
         return $array->result_array();
     }
+
+    public function gethistory()
+    {
+      $id=$this->session->userdata['id_anggota'];
+    $this->db->select('peminjaman.*, buku.nama_buku, buku.cover_buku, anggota.nama_anggota');
+    $this->db->from('peminjaman peminjaman');
+    $this->db->join('buku','buku.id_buku= peminjaman.buku_id_buku');
+    $this->db->join('anggota','anggota.id_anggota= peminjaman.id_anggota');
+    $this->db->where('anggota.id_anggota',$id);
+    $query = $this->db->get();
+    return $query->result();
+    }
 }

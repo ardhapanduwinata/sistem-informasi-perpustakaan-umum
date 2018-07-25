@@ -53,4 +53,10 @@ class Member extends CI_Controller {
         $data['array_buku']=$this->m_house->getDataPinjam($this->session->userdata('id_anggota'));
 		$this->load->view('house', $data);
 	}
+
+	 public function history()
+    {   
+        $data['history']=$this->m_house->gethistory();
+        $this->load->view('history',$data);
+    }
 }
