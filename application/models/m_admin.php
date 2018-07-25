@@ -31,7 +31,7 @@ public function cekid($id)
 		$this->db->update($this->table, $info);
     }
 public function hapus($id){
-        $this->db->where($this->primary, $id);
+		$this->db->where($this->primary, $id);
 		$this->db->delete($this->table);
     }
 }
