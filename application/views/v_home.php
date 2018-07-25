@@ -10,15 +10,9 @@
     <link href="<?php echo base_url('assets/plugins/pace/pace-theme-big-counter.css');?>" rel="stylesheet" />
     <link href="<?php echo base_url('assets/css/style.css');?>" rel="stylesheet" />
     <link href="<?php echo base_url('assets/css/main-style.css');?>" rel="stylesheet" />
-
-     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets_datatables/DataTables/media/css/jquery.dataTables.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets_datatables/DataTables/media/css/dataTables.bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets_datatables/DataTables/datatables.min.css"/>
-   <!--  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
     <!-- Page-Level CSS -->
     <link href="<?php echo base_url('assets/plugins/morris/morris-0.4.3.min.css');?>" rel="stylesheet" />
-
-   
    </head>
 <body>
     <!--  wrapper -->
@@ -46,12 +40,6 @@
     <script src="<?php echo base_url("assets/plugins/morris/raphael-2.1.0.min.js");?>"></script>
     <script src="<?php echo base_url("assets/plugins/morris/morris.js");?>"></script>
     <script src="<?php echo base_url("assets/scripts/dashboard-demo.js");?>"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets_datatables/DataTables/media/js/jquery2.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets_datatables/DataTables/media/js/jquery.dataTables.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets_datatables/DataTables/datatables.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets_datatables\DataTables\assets_ajax\js/jquery.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets_datatables\DataTables\assets_ajax\js/bootstrap.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assets_datatables\DataTables\assets_ajax\js/jquery.dataTables.js"></script>
 
 </body>
 

@@ -58,12 +58,3 @@
     </body>
     </html>
 </table>
-
-<script src="<?php echo base_url("assets/plugins/jquery-1.10.2.js");?>"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-    $('.example').DataTable();
-} );
-</script>

@@ -108,9 +108,6 @@
                             <li>
                                 <a href="<?php echo base_url('index.php/pinjam/datapengembalian');?>">Pengembalian</a>
                             </li>
-                            <li>
-                                <a href="#">Denda</a>
-                            </li>
                         </ul>
                         <!-- second-level-items -->
                     </li>
