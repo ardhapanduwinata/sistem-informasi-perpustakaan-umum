@@ -58,7 +58,7 @@
                     <div class="p-5">
                         <h2 class="display-4"><?= $key['nama_buku'] ?></h2>
                         <p><?= $key['sinopsis'] ?></p>
-                        <p><?= $key['sinopsis'] ?></p>
+                     
                         <?php if($this->uri->segment(2)=='pengembalian'){?>
                         <a class="btn btn-outline-primary"  href="<?php echo site_url('house/ViewMorePengembalian/'.$key['id_buku'].'/'.$key['id_peminjaman']);?>">View More</a>
                         <?php }else{?>
