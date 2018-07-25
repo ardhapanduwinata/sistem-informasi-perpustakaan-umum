@@ -37,13 +37,9 @@
                         <td><?php echo $row->alamat_admin;?></td>
                         <td><?php echo $row->notelp_admin;?></td>
                         <td><?php echo $row->email_admin;?></td>
-<<<<<<< HEAD
                         <td><?php echo $row->username;?></td>
                         <td><?php echo $row->password;?></td>
                         <td><img src="<?php echo base_url().'assets/path/'. $row->foto;?>" width="50px" height="50px"></td>
-=======
-                        <td><img src="<?php echo base_url().'assets/path/'. $row->cover_admin;?>" width="50px" height="50px"></td>
->>>>>>> 92b9a93b50ed68c553c0eed2ef99b37c5f9b2f21
                         <td> 
                             <a class="btn btn-warning" href="<?php echo base_url('index.php/admin/edit/'.$row->id_admin);?>">edit</a>
                             <a  class="btn btn-danger" onclick="return confirm('Anda Yakin?, Data akan dihapus Permanen!'); href="<?php echo base_url('index.php/admin/hapusproses/'.$row->id_admin);?>" >delete</a>

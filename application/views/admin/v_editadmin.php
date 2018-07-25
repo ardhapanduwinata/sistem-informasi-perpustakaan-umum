@@ -25,12 +25,11 @@
                                         <div class="form-group">
                                             <label>@mail</label>
                                             <input class="form-control" type="email" name="email_admin" id="email_admin" placeholder="@mail" value="<?php echo $data['email_admin'];?>" class="span3" required>
-                                            
+                                            <input class="form-control" type="hidden" name="foto_old"  value="<?php echo $data['foto'];?>">
                                         </div>
                                         <div>
-                                            <input class="form-control" type="hidden" name="foto_old"  value="<?php echo $data['cover_admin'];?>">
                                             <label>foto</label>
-                                            <input class="form-control" type="file" name="cover_admin" id="cover_admin"  class="span3"  required>
+                                            <input class="form-control" type="file" name="foto" id="foto"  class="span3"  required>
                                             <br>
                                         <div class="form-group">
                                             <label>username</label>
