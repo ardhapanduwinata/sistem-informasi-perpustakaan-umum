@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Jul 25, 2018 at 06:05 AM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 5.6.35
+-- Host: 127.0.0.1:3307
+-- Generation Time: 25 Jul 2018 pada 12.10
+-- Versi Server: 10.1.9-MariaDB
+-- PHP Version: 5.6.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -25,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Struktur dari tabel `admin`
 --
 
 CREATE TABLE `admin` (
@@ -40,17 +38,17 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `admin`
+-- Dumping data untuk tabel `admin`
 --
 
 INSERT INTO `admin` (`id_admin`, `nama_admin`, `alamat_admin`, `notelp_admin`, `email_admin`, `username`, `password`, `foto`) VALUES
 (1, 'System', '', '', '', '', '', ''),
-(2, 'arwi', 'blabla', '000000', 'blabla@nmail', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'GAME1.PNG');
+(2, 'admin', 'blabla', '000000', 'blabla@nmail', 'admin', '21232f297a57a5a743894a0e4a801fc3', '10s261.png');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `anggota`
+-- Struktur dari tabel `anggota`
 --
 
 CREATE TABLE `anggota` (
@@ -65,17 +63,17 @@ CREATE TABLE `anggota` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `anggota`
+-- Dumping data untuk tabel `anggota`
 --
 
 INSERT INTO `anggota` (`id_anggota`, `nama_anggota`, `alamat_anggota`, `notelp_anggota`, `email_anggota`, `username`, `password`, `foto`) VALUES
 (1, 'tri', 'malang', '9235', 'trinsp@gmail.com', 'user', 'ee11cbb19052e40b07aac0ca060c23ee', '10s26.png'),
-(2, 'bb', 'mlg', '099', 'bb@mail', 'bb', 'bb', 'bb.png');
+(2, 'bb', 'mlg', '099', 'bb@mail', 'bb', '21ad0bd836b90d08f4cf640b4c298e7c', 'bb.png');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `buku`
+-- Struktur dari tabel `buku`
 --
 
 CREATE TABLE `buku` (
@@ -90,11 +88,11 @@ CREATE TABLE `buku` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `buku`
+-- Dumping data untuk tabel `buku`
 --
 
 INSERT INTO `buku` (`id_buku`, `nama_buku`, `pengarang`, `tahun_terbit`, `cover_buku`, `id_penerbit`, `id_kategori`, `sinopsis`) VALUES
-(1, 'IPA XII', 'tole', '2018-07-11', '43.jpg', 2, 1, ''),
+(1, 'IPA XII', 'tole', '2018-07-11', 'etc_bind_db192.PNG', 2, 1, 'ksamdlkasmd'),
 (2, 'MATEMATIKA', 'BUDI UTOMO', '2018', 'dpkg.PNG', 1, 1, ''),
 (3, 'FISIKA 1', 'FATAYATI', '2018', 'lamp.jpg', 1, 1, ''),
 (4, 'ok google', 'beby', '2017', 'FORMATAN.jpg', 3, 2, ''),
@@ -104,7 +102,7 @@ INSERT INTO `buku` (`id_buku`, `nama_buku`, `pengarang`, `tahun_terbit`, `cover_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kategori`
+-- Struktur dari tabel `kategori`
 --
 
 CREATE TABLE `kategori` (
@@ -114,18 +112,19 @@ CREATE TABLE `kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `kategori`
+-- Dumping data untuk tabel `kategori`
 --
 
 INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `lokasi`) VALUES
 (1, 'fisika', 'B21'),
 (2, 'Matematika', 'A1'),
-(3, 'IPA', 'C1');
+(3, 'IPA', 'C1'),
+(4, 'jaringan', 'J1');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `login`
+-- Struktur dari tabel `login`
 --
 
 CREATE TABLE `login` (
@@ -138,7 +137,7 @@ CREATE TABLE `login` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `peminjaman`
+-- Struktur dari tabel `peminjaman`
 --
 
 CREATE TABLE `peminjaman` (
@@ -152,19 +151,22 @@ CREATE TABLE `peminjaman` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `peminjaman`
+-- Dumping data untuk tabel `peminjaman`
 --
 
 INSERT INTO `peminjaman` (`id_peminjaman`, `tanggal_peminjaman`, `tanggal_pengembalian`, `id_anggota`, `buku_id_buku`, `id_admin`, `status`) VALUES
 (2, '2018-07-24', '2018-07-24', 1, 2, 2, 'Dikembalikan'),
 (3, '2018-07-24', '2018-07-24', 1, 3, 2, 'Dikembalikan'),
 (4, '2018-07-24', '2018-07-24', 1, 3, 2, 'Dikembalikan'),
-(5, '2018-07-24', '2018-07-24', 1, 2, 2, 'Dikembalikan');
+(5, '2018-07-24', '2018-07-24', 1, 2, 2, 'Dikembalikan'),
+(6, '2018-07-25', '2018-07-25', 1, 1, 2, 'Dikembalikan'),
+(7, '2018-07-25', '2018-07-25', 1, 1, 2, 'Dikembalikan'),
+(8, '2018-07-25', '2018-07-25', 2, 1, 2, 'Dikembalikan');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `penerbit`
+-- Struktur dari tabel `penerbit`
 --
 
 CREATE TABLE `penerbit` (
@@ -173,7 +175,7 @@ CREATE TABLE `penerbit` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `penerbit`
+-- Dumping data untuk tabel `penerbit`
 --
 
 INSERT INTO `penerbit` (`id_penerbit`, `nama_penerbit`) VALUES
@@ -186,7 +188,7 @@ INSERT INTO `penerbit` (`id_penerbit`, `nama_penerbit`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pengembalian`
+-- Struktur dari tabel `pengembalian`
 --
 
 CREATE TABLE `pengembalian` (
@@ -264,62 +266,54 @@ ALTER TABLE `pengembalian`
 --
 ALTER TABLE `admin`
   MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `anggota`
 --
 ALTER TABLE `anggota`
   MODIFY `id_anggota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT for table `buku`
 --
 ALTER TABLE `buku`
   MODIFY `id_buku` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `peminjaman`
 --
 ALTER TABLE `peminjaman`
-  MODIFY `id_peminjaman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
+  MODIFY `id_peminjaman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `penerbit`
 --
 ALTER TABLE `penerbit`
   MODIFY `id_penerbit` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
 -- AUTO_INCREMENT for table `pengembalian`
 --
 ALTER TABLE `pengembalian`
   MODIFY `id_pengembalian` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+--
 
 --
--- Constraints for dumped tables
---
-
---
--- Constraints for table `buku`
+-- Ketidakleluasaan untuk tabel `buku`
 --
 ALTER TABLE `buku`
   ADD CONSTRAINT `fk_buku_kategori1` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_buku_penerbit1` FOREIGN KEY (`id_penerbit`) REFERENCES `penerbit` (`id_penerbit`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `peminjaman`
+-- Ketidakleluasaan untuk tabel `peminjaman`
 --
 ALTER TABLE `peminjaman`
   ADD CONSTRAINT `fk_peminjaman_admin1` FOREIGN KEY (`id_admin`) REFERENCES `admin` (`id_admin`) ON DELETE NO ACTION ON UPDATE NO ACTION,
@@ -327,12 +321,11 @@ ALTER TABLE `peminjaman`
   ADD CONSTRAINT `fk_peminjaman_buku1` FOREIGN KEY (`buku_id_buku`) REFERENCES `buku` (`id_buku`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `pengembalian`
+-- Ketidakleluasaan untuk tabel `pengembalian`
 --
 ALTER TABLE `pengembalian`
   ADD CONSTRAINT `fk_pengembalian_admin1` FOREIGN KEY (`id_admin`) REFERENCES `admin` (`id_admin`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_pengembalian_peminjaman1` FOREIGN KEY (`id_peminjaman`) REFERENCES `peminjaman` (`id_peminjaman`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
