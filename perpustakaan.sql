@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: 25 Jul 2018 pada 12.10
+-- Generation Time: 26 Jul 2018 pada 03.32
 -- Versi Server: 10.1.9-MariaDB
 -- PHP Version: 5.6.15
 
@@ -161,7 +161,10 @@ INSERT INTO `peminjaman` (`id_peminjaman`, `tanggal_peminjaman`, `tanggal_pengem
 (5, '2018-07-24', '2018-07-24', 1, 2, 2, 'Dikembalikan'),
 (6, '2018-07-25', '2018-07-25', 1, 1, 2, 'Dikembalikan'),
 (7, '2018-07-25', '2018-07-25', 1, 1, 2, 'Dikembalikan'),
-(8, '2018-07-25', '2018-07-25', 2, 1, 2, 'Dikembalikan');
+(8, '2018-07-25', '2018-07-25', 2, 1, 2, 'Dikembalikan'),
+(9, '2018-07-25', '2018-07-25', 1, 1, 2, 'Dikembalikan'),
+(10, '2018-07-25', '2018-07-25', 1, 1, 2, 'Dikembalikan'),
+(11, '2018-07-25', '2018-07-25', 1, 1, 2, 'Dikembalikan');
 
 -- --------------------------------------------------------
 
@@ -290,7 +293,7 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `peminjaman`
 --
 ALTER TABLE `peminjaman`
-  MODIFY `id_peminjaman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_peminjaman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `penerbit`
 --
