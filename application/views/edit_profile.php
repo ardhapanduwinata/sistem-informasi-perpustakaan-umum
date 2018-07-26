@@ -1,26 +1,6 @@
-
-
-
                     <?php $this->load->view('header.php');?>
 
-<title>One Page Wonder - Start Bootstrap Template</title>
-
-<header class="masthead text-center text-white" style="height: 100px;">
-    <div class="masthead-content">
-        <div class="container" style="margin-top:-8rem;">
-            <h1 class="masthead-heading mb-0">  Perpustakaan Online </h1>
-            <h2 class="masthead-subheading mb-0">Malang Raya </h2>
-        </div>
-
-    </div>
-    <br>
-    <br>
-    <!-- <div class="bg-circle-1 bg-circle"></div>
-    <div class="bg-circle-2 bg-circle"></div>
-    <div class="bg-circle-3 bg-circle"></div>
-    <div class="bg-circle-4 bg-circle"></div> -->
-
-</header>
+<title>Perpustakaan Online</title>
 <div class="container">
     <div class="row">
         <div class="col-12">
@@ -44,7 +24,7 @@
         <label>Password</label>
         <input type="password" class="form-control" name="password" placeholder="Password">
         <br>
-        <img src="<?php echo base_url('assets/path/'.$rows['foto']) ?>" alt="" style="width: 100%">
+        <img src="<?php echo base_url('assets/path/'.$rows['foto']) ?>" alt="" style="width: 15%">
         <label>Foto</label>
         <input type="file" class="form-control" name="foto">
         <p><?php echo (isset($error) ? $error : "") ?></p><br>
